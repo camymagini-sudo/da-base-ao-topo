@@ -301,9 +301,7 @@ export default function CorporateGrowthSite() {
       </section>
 
       {/* MENTORIA */}
-      <section className="px-6 py-24 md:px-16 lg:px-24 border-b border-white/10">
-
-       <section className="px-6 py-24 md:px-16 lg:px-24 border-b border-white/10">
+     <section className="px-6 py-24 md:px-16 lg:px-24 border-b border-white/10">
   <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
     {/* TEXTO */}
