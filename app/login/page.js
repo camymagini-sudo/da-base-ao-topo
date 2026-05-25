@@ -60,9 +60,12 @@ export default function LoginPage() {
             Ainda não possui conta?
           </p>
 
-          <button className="border border-white/10 px-6 py-3 rounded-2xl hover:bg-white/5 transition">
-            Criar conta
-          </button>
+<a
+  href="/register"
+  className="inline-flex border border-white/10 rounded-2xl px-6 py-3 hover:bg-white hover:text-black transition"
+>
+  Criar conta
+</a>
 
         </div>
 
