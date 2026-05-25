@@ -1,9 +1,56 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function DashboardPage() {
 
+const communityQuestions = [
+  {
+    role: "Supervisora • São Paulo",
+    tag: "Promoção",
+    title:
+      "Entrego resultado há meses, mas nunca sou considerada nas movimentações internas.",
+    text:
+      "Sinto que pessoas com mais relacionamento político acabam tendo mais visibilidade do que quem performa operacionalmente.",
+  },
+
+  {
+    role: "Analista Sênior • Curitiba",
+    tag: "Liderança",
+    title:
+      "Como saber se estou pronta para gestão ou apenas absorvendo mais responsabilidade?",
+    text:
+      "Tenho liderado projetos, treinado pessoas e resolvido crises, mas nunca recebo movimentação formal.",
+  },
+
+  {
+    role: "Coordenadora • Recife",
+    tag: "Política Corporativa",
+    title:
+      "Como desenvolver influência sem parecer interesseira ou artificial?",
+    text:
+      "Percebo que networking interno pesa muito, mas ainda tenho dificuldade em me posicionar estrategicamente.",
+  },
+
+  {
+    role: "Gerente Operacional • Belo Horizonte",
+    tag: "Gestão de Crise",
+    title:
+      "Como manter autoridade em operações sob pressão sem desgastar completamente a equipe?",
+    text:
+      "KPI agressivo, absenteísmo alto e turnover constante estão afetando diretamente o clima operacional.",
+  },
+
+  {
+    role: "Especialista • Porto Alegre",
+    tag: "Posicionamento",
+    title:
+      "Meu gestor sempre me elogia individualmente, mas nunca me expõe em reuniões estratégicas.",
+    text:
+      "Isso pode limitar meu crescimento executivo dentro da empresa?",
+  },
+];
+  
   const [contentUnlocked] = useState(false);
 
   return (
