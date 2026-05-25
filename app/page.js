@@ -127,13 +127,11 @@ export default function CorporateGrowthSite() {
                 acesso vitalício
               </p>
 
-            </div>
+</div>
 
-          </div>
+    </div>
 
-        </div>
-
-      </section>
+</section>
 
       {/* SOBRE */}
       <section className="px-6 py-24 md:px-16 lg:px-24 border-b border-white/10">
