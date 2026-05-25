@@ -169,17 +169,17 @@ export default function DashboardPage() {
 
           <div className="bg-zinc-900 border border-white/10 rounded-[28px] p-6">
 
-            <p className="text-zinc-500 text-sm mb-4">
-              Próxima liberação
-            </p>
+  <p className="text-zinc-500 text-sm mb-4">
+    Nível Estratégico
+  </p>
 
-            <h3 className="text-3xl font-bold mb-2">
-              7 dias
-            </h3>
+  <h3 className="text-3xl font-bold mb-4">
+    Executivo em Desenvolvimento
+  </h3>
 
-            <p className="text-zinc-400 leading-relaxed">
-              Novos conteúdos estratégicos são liberados automaticamente a cada 7 dias.
-            </p>
+  <p className="text-zinc-400 leading-relaxed">
+    Continue avançando para desbloquear novos frameworks, templates e conteúdos estratégicos.
+  </p>
 
           </div>
 
