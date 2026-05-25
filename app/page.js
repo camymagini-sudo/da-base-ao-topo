@@ -152,9 +152,21 @@ export default function CorporateGrowthSite() {
                 Passei por diferentes níveis hierárquicos, mudanças de estado por oportunidades profissionais, ambientes de crise, operações sob risco contratual e projetos globais de transformação.
               </p>
 
-              <p>
-                Hoje, compartilho os aprendizados, decisões, erros e frameworks que realmente fizeram diferença em cada etapa da carreira — sem teoria genérica e sem discurso corporativo superficial.
-              </p>
+              <div className="space-y-6">
+  <p>
+    Hoje, compartilho os aprendizados, decisões, erros e frameworks que realmente fizeram diferença em cada etapa da carreira — sem teoria genérica e sem discurso corporativo superficial.
+  </p>
+
+  <div className="pt-6 border-t border-white/10">
+    <p className="text-2xl font-semibold text-white">
+      Camila Magini Da Costa
+    </p>
+
+    <p className="text-zinc-400 mt-2">
+      Global Quality Assurance Manager
+    </p>
+  </div>
+</div>
             </div>
           </div>
 
