@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 
 export default function CorporateGrowthSite() {
-
   const gallery = [
     {
       image: "/palestra.jpg",
@@ -40,14 +39,14 @@ export default function CorporateGrowthSite() {
 
     {
       text:
-        "Seu maior diferencial é a capacidade de gerar resultados escaláveis e estruturar operações complexas com visão estratégica. Camila agrega valor real para performance, cultura e crescimento organizacional.",
+        "Seu maior diferencial é a capacidade de gerar resultados escaláveis e estruturar operações complexas com visão estratégica.",
       name: "Ex-Líder Qualidade & Treinamento",
       role: "Global Operations",
     },
 
     {
       text:
-        "Camila possui uma visão estratégica rara. Atua antecipando riscos, estruturando soluções sustentáveis e elevando a qualidade operacional com foco em impacto de longo prazo.",
+        "Camila possui uma visão estratégica rara. Atua antecipando riscos, estruturando soluções sustentáveis e elevando a qualidade operacional.",
       name: "Parceiro de Projeto",
       role: "Customer Experience",
     },
@@ -127,21 +126,20 @@ export default function CorporateGrowthSite() {
                 acesso vitalício
               </p>
 
-                </div>
-
-              </div>
-
             </div>
 
           </div>
 
-</section>
+        </div>
+
+      </section>
 
       {/* SOBRE */}
       <section className="px-6 py-24 md:px-16 lg:px-24 border-b border-white/10">
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-start">
 
+          {/* TEXTO */}
           <div>
 
             <p className="uppercase tracking-[0.35em] text-sm text-zinc-500 mb-6">
@@ -168,6 +166,7 @@ export default function CorporateGrowthSite() {
 
             </div>
 
+            {/* ASSINATURA */}
             <div className="mt-14 pt-8 border-t border-white/10">
 
               <div className="flex items-center gap-6">
@@ -175,7 +174,7 @@ export default function CorporateGrowthSite() {
                 <img
                   src="/perfil.jpg"
                   alt="Camila Magini"
-                  className="w-28 h-28 rounded-full object-cover border-2 border-white/20 shadow-xl"
+                  className="w-24 h-24 rounded-full object-cover border-2 border-white/20"
                 />
 
                 <div>
@@ -196,130 +195,98 @@ export default function CorporateGrowthSite() {
 
           </div>
 
-         <div>
+          {/* CARD DIREITO */}
+          <div>
 
-  <div className="bg-zinc-900 border border-white/10 rounded-[32px] p-8 h-full flex flex-col justify-between">
+            <div className="bg-zinc-900 border border-white/10 rounded-[32px] p-8">
 
-    {/* MÉTRICAS */}
-    <div>
+              {/* MÉTRICAS */}
+              <div className="grid grid-cols-2 gap-8 mb-8">
 
-      <div className="grid grid-cols-2 gap-8 mb-8">
+                <div>
+                  <p className="text-5xl font-bold mb-1">7</p>
+                  <p className="text-zinc-400 text-sm">
+                    promoções ao longo da carreira corporativa
+                  </p>
+                </div>
 
-        <div>
-          <p className="text-5xl font-bold mb-1">7</p>
-          <p className="text-zinc-400 text-sm leading-relaxed">
-            promoções ao longo da carreira corporativa
-          </p>
-        </div>
+                <div>
+                  <p className="text-5xl font-bold mb-1">5</p>
+                  <p className="text-zinc-400 text-sm">
+                    áreas de atuação estratégica
+                  </p>
+                </div>
 
-        <div>
-          <p className="text-5xl font-bold mb-1">5</p>
-          <p className="text-zinc-400 text-sm leading-relaxed">
-            áreas de atuação estratégica
-          </p>
-        </div>
+                <div>
+                  <p className="text-5xl font-bold mb-1">Global</p>
+                  <p className="text-zinc-400 text-sm">
+                    experiência multinacional em gestão
+                  </p>
+                </div>
 
-        <div>
-          <p className="text-5xl font-bold mb-1">Global</p>
-          <p className="text-zinc-400 text-sm leading-relaxed">
-            experiência multinacional em gestão
-          </p>
-        </div>
+                <div>
+                  <p className="text-5xl font-bold mb-1">10</p>
+                  <p className="text-zinc-400 text-sm">
+                    anos em operações, performance e liderança
+                  </p>
+                </div>
 
-        <div>
-          <p className="text-5xl font-bold mb-1">10</p>
-          <p className="text-zinc-400 text-sm leading-relaxed">
-            anos em operações, performance e liderança
-          </p>
-        </div>
+              </div>
 
-      </div>
+              {/* ESCALADA */}
+              <div className="border-t border-white/10 pt-6">
 
-      {/* ESCALADA */}
-      <div className="border-t border-white/10 pt-6">
+                <h3 className="text-3xl font-bold mb-3">
+                  Escalada profissional
+                </h3>
 
-        <h3 className="text-3xl font-bold mb-3">
-          Escalada profissional
-        </h3>
+                <p className="text-zinc-300 leading-relaxed">
+                  Especialista • Supervisor • Coordenadora • Gerente • Gerente Sênior • Gerente Global
+                </p>
 
-        <p className="text-zinc-300 leading-relaxed">
-          Especialista • Supervisor • Coordenadora • Gerente • Gerente Sênior • Gerente Global
-        </p>
+              </div>
 
-      </div>
+              {/* ÁREAS */}
+              <div className="border-t border-white/10 pt-6 mt-6">
 
-      {/* ÁREAS */}
-      <div className="border-t border-white/10 pt-6 mt-6">
+                <h3 className="text-3xl font-bold mb-3">
+                  Áreas de atuação
+                </h3>
 
-        <h3 className="text-3xl font-bold mb-3">
-          Áreas de atuação
-        </h3>
+                <p className="text-zinc-300 leading-relaxed">
+                  Qualidade • Treinamento • Operações • Processos • Projetos
+                </p>
 
-        <p className="text-zinc-300 leading-relaxed">
-          Qualidade • Treinamento • Operações • Processos • Projetos
-        </p>
+              </div>
 
-      </div>
+              {/* MINI SHOWCASE */}
+              <div className="border-t border-white/10 pt-6 mt-6">
 
-    </div>
+                <div className="flex items-center gap-4 bg-black/30 border border-white/10 rounded-2xl overflow-hidden">
 
-    {/* MINI SHOWCASE */}
-    <div className="border-t border-white/10 pt-6 mt-8">
+                  <img
+                    src={gallery[currentImage].image}
+                    alt={gallery[currentImage].title}
+                    className="w-[120px] h-[90px] object-cover"
+                  />
 
-      <div className="flex items-center gap-4 bg-black/30 border border-white/10 rounded-2xl overflow-hidden">
+                  <div className="pr-4">
 
-        <img
-          src={gallery[currentImage].image}
-          alt={gallery[currentImage].title}
-          className="w-[140px] h-[110px] object-cover"
-        />
+                    <p className="font-semibold text-base mb-1">
+                      {gallery[currentImage].title}
+                    </p>
 
-        <div className="pr-4">
+                    <p className="text-zinc-400 text-sm leading-relaxed">
+                      {gallery[currentImage].description}
+                    </p>
 
-          <p className="font-semibold text-lg mb-1">
-            {gallery[currentImage].title}
-          </p>
+                  </div>
 
-          <p className="text-zinc-400 text-sm leading-relaxed">
-            {gallery[currentImage].description}
-          </p>
+                </div>
 
-        </div>
+              </div>
 
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-            {/* MINI CARROSSEL EXECUTIVO */}
-<div className="mt-8 border-t border-white/10 pt-8">
-
-  <div className="bg-black/40 border border-white/10 rounded-3xl overflow-hidden max-w-[320px] transition-all duration-700">
-
-    <img
-      src={gallery[currentImage].image}
-      alt={gallery[currentImage].title}
-      className="w-full h-[180px] object-cover"
-    />
-
-    <div className="p-5">
-
-      <p className="text-xl font-semibold mb-2">
-        {gallery[currentImage].title}
-      </p>
-
-      <p className="text-sm text-zinc-400 leading-relaxed">
-        {gallery[currentImage].description}
-      </p>
-
-    </div>
-
-  </div>
-
-</div>
+            </div>
 
           </div>
 
@@ -341,7 +308,7 @@ export default function CorporateGrowthSite() {
           </h2>
 
           <p className="text-xl text-zinc-300 leading-relaxed mb-12">
-            Sessões práticas focadas em posicionamento, liderança, performance, gestão política corporativa, entrevistas, promoção e crescimento estratégico.
+            Sessões práticas focadas em posicionamento, liderança, performance, gestão política corporativa e crescimento estratégico.
           </p>
 
           <div className="bg-zinc-900 border border-white/10 rounded-[32px] p-12 inline-block">
