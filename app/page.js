@@ -227,17 +227,12 @@ export default function CorporateGrowthSite() {
               </div>
             </div>
 
-            <div className="space-y-8">
+           <div className="space-y-8">
 
-  <div className="flex items-center gap-5 pt-2">
-    <img
-      src="/perfil.jpg"
-      alt="Camila Magini"
-      className="w-28 h-28 rounded-full object-cover border-2 border-white/10"
-    />
+  <div className="flex flex-col items-start gap-4 pt-2">
 
     <div>
-      <p className="text-white font-semibold text-lg">
+      <p className="text-white font-semibold text-2xl">
         Camila Magini Da Costa
       </p>
 
@@ -245,45 +240,74 @@ export default function CorporateGrowthSite() {
         Global Quality Assurance Manager
       </p>
     </div>
+
+    <img
+      src="/perfil.jpg"
+      alt="Camila Magini"
+      className="w-24 h-24 rounded-full object-cover border-2 border-white/10"
+    />
   </div>
 
-  <div className="space-y-5">
+  <div className="bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden">
 
-    <div className="bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden">
+    <div className="relative">
+
       <img
+        id="dynamicImage"
         src="/palestra.jpg"
-        alt="Palestra Motivacional"
-        className="w-full h-64 object-cover"
+        alt="Imagem dinâmica"
+        className="w-full h-[320px] object-cover transition-all duration-500"
       />
 
-      <div className="p-5">
-        <p className="text-lg font-semibold">
+      <div className="absolute bottom-0 left-0 right-0 bg-black/70 p-6">
+        <p
+          id="dynamicTitle"
+          className="text-xl font-semibold"
+        >
           Palestra Motivacional
         </p>
 
-        <p className="text-zinc-400 text-sm mt-1">
+        <p
+          id="dynamicDescription"
+          className="text-zinc-300 text-sm mt-2"
+        >
           Carreira, liderança feminina e desenvolvimento profissional.
         </p>
       </div>
+
     </div>
+  </div>
 
-    <div className="bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden">
-      <img
-        src="/lideranca.jpg"
-        alt="Liderança Corporativa"
-        className="w-full h-64 object-cover"
-      />
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        const slides = [
+          {
+            image: "/palestra.jpg",
+            title: "Palestra Motivacional",
+            description: "Carreira, liderança feminina e desenvolvimento profissional."
+          },
+          {
+            image: "/lideranca.jpg",
+            title: "Liderança & Gestão",
+            description: "Atuação como Gerente Sênior liderando operações e gestores."
+          }
+        ];
 
-      <div className="p-5">
-        <p className="text-lg font-semibold">
-          Liderança & Gestão
-        </p>
+        let current = 0;
 
-        <p className="text-zinc-400 text-sm mt-1">
-          Atuação como Gerente Sênior liderando operações e gestores.
-        </p>
-      </div>
-    </div>
+        setInterval(() => {
+          current = (current + 1) % slides.length;
+
+          document.getElementById("dynamicImage").src = slides[current].image;
+          document.getElementById("dynamicTitle").innerText = slides[current].title;
+          document.getElementById("dynamicDescription").innerText = slides[current].description;
+
+        }, 4000);
+      `
+    }}
+  />
+</div>
 
   </div>
 </div>
