@@ -227,7 +227,7 @@ export default function CorporateGrowthSite() {
               </div>
             </div>
 
-           <div className="space-y-8">
+          <div className="space-y-8">
 
   <div className="flex flex-col items-start gap-4 pt-2">
 
@@ -250,31 +250,24 @@ export default function CorporateGrowthSite() {
 
   <div className="bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden">
 
-    <div className="relative">
+    <img
+      src="/palestra.jpg"
+      alt="Palestra Motivacional"
+      className="w-full h-[320px] object-cover"
+    />
 
-      <img
-        id="dynamicImage"
-        src="/palestra.jpg"
-        alt="Imagem dinâmica"
-        className="w-full h-[320px] object-cover transition-all duration-500"
-      />
+    <div className="p-6">
+      <p className="text-xl font-semibold">
+        Palestra Motivacional
+      </p>
 
-      <div className="absolute bottom-0 left-0 right-0 bg-black/70 p-6">
-        <p
-          id="dynamicTitle"
-          className="text-xl font-semibold"
-        >
-          Palestra Motivacional
-        </p>
+      <p className="text-zinc-400 text-sm mt-2">
+        Carreira, liderança feminina e desenvolvimento profissional.
+      </p>
+    </div>
+  </div>
 
-        <p
-          id="dynamicDescription"
-          className="text-zinc-300 text-sm mt-2"
-        >
-          Carreira, liderança feminina e desenvolvimento profissional.
-        </p>
-      </div>
-
+</div>
     </div>
   </div>
 
