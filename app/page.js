@@ -43,19 +43,21 @@ export default function CorporateGrowthSite() {
 
   const testimonials = [
     {
-      name: 'Ex-Líder Operacional',
-      role: 'Global Operations',
-      text: 'Camila possui uma capacidade rara de transformar operações críticas em ambientes altamente performáticos. Sua liderança une estratégia, execução e desenvolvimento humano.',
+      name: 'Gerente Operacional',
+      role: 'Operação Local',
+      text: 'Camila consistently demonstrated a high level of professionalism, organization and commitment to results. Even in high-pressure situations, she remained calm and guided the team with clarity. Her communication style is clear, approachable and highly effective for team alignment.',
     },
+
+    {
+      name: 'Ex-Líder Qualidade e Treinamento',
+      role: 'Global Operations',
+      text: 'Camila demonstrated exceptional competence in managing and implementing complex processes. Her greatest differentiator is the ability to drive scalable results while combining strategic vision with exemplary interpersonal skills.',
+    },
+
     {
       name: 'Parceiro de Projeto',
-      role: 'Customer Experience & QA',
-      text: 'O diferencial da Camila sempre foi a profundidade analítica somada à habilidade de navegar ambientes corporativos complexos com inteligência e clareza.',
-    },
-    {
-      name: 'Ex-Colaborador',
-      role: 'Operations Leadership',
-      text: 'Aprendi mais sobre liderança prática trabalhando com a Camila do que em anos de treinamentos corporativos tradicionais.',
+      role: 'Customer Experience',
+      text: 'Camila operates several steps ahead. She combines sharp analytical thinking with strong business vision, anticipating risks, identifying opportunities and building scalable solutions with long-term impact.',
     },
   ];
 
@@ -65,25 +67,25 @@ export default function CorporateGrowthSite() {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
           <div>
             <p className="uppercase tracking-[0.3em] text-sm text-zinc-400 mb-5">
-              Corporate Growth Platform
+              O Mundo Corporativo Real
             </p>
 
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
-              Da Operação à Liderança Global.
+              Da Base à Liderança Global.
             </h1>
 
             <p className="text-zinc-300 text-lg leading-relaxed mb-8 max-w-2xl">
-              Estratégias reais de crescimento corporativo baseadas em quase 10 anos de experiência em operações globais,
+              Estratégias reais de crescimento corporativo baseadas em 10 anos de experiência em operações globais,
               gestão de crise, performance, liderança e qualidade.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <button className="bg-white text-black px-6 py-4 rounded-2xl font-semibold hover:scale-105 transition-transform">
-                Entrar para a Plataforma
+                Quero acesso imediato
               </button>
 
               <button className="border border-white/20 px-6 py-4 rounded-2xl hover:bg-white/5 transition">
-                Conhecer Mentoria
+                Aplicar para Mentoria
               </button>
             </div>
           </div>
@@ -92,6 +94,7 @@ export default function CorporateGrowthSite() {
             <div className="space-y-6">
               <div>
                 <p className="text-zinc-400 text-sm mb-2">Inclui:</p>
+
                 <ul className="space-y-3 text-zinc-200">
                   <li>• Biblioteca exclusiva de estratégias corporativas</li>
                   <li>• Casos reais e lições práticas</li>
@@ -102,10 +105,26 @@ export default function CorporateGrowthSite() {
               </div>
 
               <div className="border-t border-white/10 pt-6">
-                <p className="text-zinc-400 text-sm mb-2">Preço fundador</p>
+                <p className="text-zinc-400 text-sm mb-3">
+                  Oferta de lançamento
+                </p>
+
+                <div className="flex items-center gap-3 mb-3">
+                  <p className="text-zinc-500 line-through text-2xl">
+                    R$197
+                  </p>
+
+                  <div className="bg-white text-black text-xs px-3 py-1 rounded-full font-semibold">
+                    44% OFF
+                  </div>
+                </div>
+
                 <div className="flex items-end gap-3">
-                  <h2 className="text-5xl font-bold">R$197</h2>
-                  <p className="text-zinc-400 mb-1">acesso vitalício</p>
+                  <h2 className="text-5xl font-bold">R$109,90</h2>
+
+                  <p className="text-zinc-400 mb-1">
+                    pagamento único
+                  </p>
                 </div>
               </div>
             </div>
@@ -114,14 +133,14 @@ export default function CorporateGrowthSite() {
       </section>
 
       <section className="px-6 py-20 md:px-16 lg:px-24 border-b border-white/10">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-start">
           <div>
             <p className="uppercase tracking-[0.3em] text-sm text-zinc-400 mb-4">
               Sobre Mim
             </p>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Quase 10 anos crescendo dentro do ambiente corporativo.
+              10 anos crescendo dentro do ambiente corporativo.
             </h2>
 
             <div className="space-y-6 text-zinc-300 text-lg leading-relaxed">
@@ -139,26 +158,74 @@ export default function CorporateGrowthSite() {
             </div>
           </div>
 
-          <div className="bg-zinc-900 rounded-[32px] border border-white/10 p-10">
-            <div className="grid grid-cols-2 gap-6">
-              <div>
-                <p className="text-5xl font-bold mb-2">+9</p>
-                <p className="text-zinc-400">anos em operações e liderança</p>
+          <div className="space-y-6">
+            <div className="bg-zinc-900 rounded-[32px] border border-white/10 p-10">
+              <div className="grid grid-cols-2 gap-8">
+                <div>
+                  <p className="text-5xl font-bold mb-2">7</p>
+
+                  <p className="text-zinc-400">
+                    promoções ao longo da carreira corporativa
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-5xl font-bold mb-2">5</p>
+
+                  <p className="text-zinc-400">
+                    áreas de atuação estratégica
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-5xl font-bold mb-2">Global</p>
+
+                  <p className="text-zinc-400">
+                    experiência multinacional em gestão
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-5xl font-bold mb-2">10</p>
+
+                  <p className="text-zinc-400">
+                    anos em operações, performance e liderança
+                  </p>
+                </div>
+
+                <div className="col-span-2 border-t border-white/10 pt-6">
+                  <p className="text-2xl font-bold mb-4">
+                    Escalada profissional
+                  </p>
+
+                  <p className="text-zinc-300 leading-relaxed">
+                    Especialista • Supervisor • Coordenadora • Gerente • Gerente Sênior • Gerente Global
+                  </p>
+                </div>
+
+                <div className="col-span-2 border-t border-white/10 pt-6">
+                  <p className="text-2xl font-bold mb-4">
+                    Áreas de atuação
+                  </p>
+
+                  <p className="text-zinc-300 leading-relaxed">
+                    Qualidade • Treinamento • Operações • Processos • Projetos
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4">
+              <div className="aspect-[3/4] bg-zinc-800 rounded-3xl border border-white/10 flex items-center justify-center text-zinc-500 text-sm">
+                Sua Foto
               </div>
 
-              <div>
-                <p className="text-5xl font-bold mb-2">Global</p>
-                <p className="text-zinc-400">experiência em gestão multinacional</p>
+              <div className="aspect-[3/4] bg-zinc-800 rounded-3xl border border-white/10 flex items-center justify-center text-zinc-500 text-sm">
+                Empresa
               </div>
 
-              <div>
-                <p className="text-5xl font-bold mb-2">125%</p>
-                <p className="text-zinc-400">melhoria operacional em turnaround crítico</p>
-              </div>
-
-              <div>
-                <p className="text-5xl font-bold mb-2">64%</p>
-                <p className="text-zinc-400">redução de absenteísmo em 4 meses</p>
+              <div className="aspect-[3/4] bg-zinc-800 rounded-3xl border border-white/10 flex items-center justify-center text-zinc-500 text-sm">
+                Liderança
               </div>
             </div>
           </div>
@@ -171,9 +238,11 @@ export default function CorporateGrowthSite() {
             <p className="uppercase tracking-[0.3em] text-sm text-zinc-400 mb-4">
               O que você vai encontrar
             </p>
+
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Uma biblioteca estratégica sobre o mundo corporativo real.
             </h2>
+
             <p className="text-zinc-300 text-lg leading-relaxed">
               Sem discurso motivacional vazio. Apenas experiências reais, erros, aprendizados, frameworks e decisões que fizeram diferença em cada etapa da carreira.
             </p>
@@ -185,8 +254,13 @@ export default function CorporateGrowthSite() {
                 key={index}
                 className="bg-zinc-900 border border-white/10 rounded-3xl p-8 hover:border-white/20 transition"
               >
-                <h3 className="text-2xl font-semibold mb-4">{module.title}</h3>
-                <p className="text-zinc-300 leading-relaxed">{module.description}</p>
+                <h3 className="text-2xl font-semibold mb-4">
+                  {module.title}
+                </h3>
+
+                <p className="text-zinc-300 leading-relaxed">
+                  {module.description}
+                </p>
               </div>
             ))}
           </div>
@@ -209,10 +283,26 @@ export default function CorporateGrowthSite() {
             </p>
 
             <div className="bg-zinc-900 rounded-3xl p-8 border border-white/10">
-              <p className="text-zinc-400 mb-2">Pacote completo</p>
-              <div className="flex items-end gap-3 mb-4">
-                <h3 className="text-5xl font-bold">R$1497</h3>
-                <p className="text-zinc-400 mb-1">4 sessões</p>
+              <p className="text-zinc-400 mb-2">
+                Oferta de lançamento
+              </p>
+
+              <div className="flex items-center gap-3 mb-3">
+                <p className="text-zinc-500 line-through text-2xl">
+                  R$1000
+                </p>
+
+                <div className="bg-white text-black text-xs px-3 py-1 rounded-full font-semibold">
+                  50% OFF
+                </div>
+              </div>
+
+              <div className="flex items-end gap-3 mb-6">
+                <h3 className="text-5xl font-bold">R$500</h3>
+
+                <p className="text-zinc-400 mb-1">
+                  4 sessões
+                </p>
               </div>
 
               <ul className="space-y-3 text-zinc-200">
@@ -231,8 +321,13 @@ export default function CorporateGrowthSite() {
                 key={index}
                 className="border border-white/10 rounded-3xl p-8 bg-zinc-900"
               >
-                <h3 className="text-2xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-zinc-300 leading-relaxed">{step.text}</p>
+                <h3 className="text-2xl font-semibold mb-3">
+                  {step.title}
+                </h3>
+
+                <p className="text-zinc-300 leading-relaxed">
+                  {step.text}
+                </p>
               </div>
             ))}
           </div>
@@ -262,8 +357,13 @@ export default function CorporateGrowthSite() {
                 </p>
 
                 <div>
-                  <p className="font-semibold text-lg">{testimonial.name}</p>
-                  <p className="text-zinc-400 text-sm mt-1">{testimonial.role}</p>
+                  <p className="font-semibold text-lg">
+                    {testimonial.name}
+                  </p>
+
+                  <p className="text-zinc-400 text-sm mt-1">
+                    {testimonial.role}
+                  </p>
                 </div>
               </div>
             ))}
@@ -291,7 +391,7 @@ export default function CorporateGrowthSite() {
             </button>
 
             <button className="border border-white/20 px-8 py-4 rounded-2xl hover:bg-white/5 transition">
-              Agendar mentoria
+              Aplicar para Mentoria
             </button>
           </div>
         </div>
