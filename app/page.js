@@ -84,10 +84,10 @@ export default function CorporateGrowthSite() {
 </a>
 
 <a
-  href="/checkout"
+  href="/register"
   className="border border-white/20 px-8 py-4 rounded-2xl hover:bg-white hover:text-black transition"
 >
-  Conhecer Mentoria
+  Aplicar para Mentoria
 </a>
 
             </div>
