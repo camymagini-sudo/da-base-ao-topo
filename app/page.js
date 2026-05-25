@@ -228,18 +228,24 @@ export default function CorporateGrowthSite() {
             </div>
 
             <div className="grid grid-cols-3 gap-4">
-              <div className="aspect-[3/4] bg-zinc-800 rounded-3xl border border-white/10 flex items-center justify-center text-zinc-500 text-sm">
-                Sua Foto
-              </div>
+  <img
+    src="/perfil.jpg"
+    alt="Camila Magini"
+    className="aspect-[3/4] object-cover rounded-3xl border border-white/10"
+  />
 
-              <div className="aspect-[3/4] bg-zinc-800 rounded-3xl border border-white/10 flex items-center justify-center text-zinc-500 text-sm">
-                Empresa
-              </div>
+  <img
+    src="/palestra.jpg"
+    alt="Palestra sobre carreira e liderança feminina"
+    className="aspect-[3/4] object-cover rounded-3xl border border-white/10"
+  />
 
-              <div className="aspect-[3/4] bg-zinc-800 rounded-3xl border border-white/10 flex items-center justify-center text-zinc-500 text-sm">
-                Liderança
-              </div>
-            </div>
+  <img
+    src="/lideranca.jpg"
+    alt="Gestão de líderes e operações"
+    className="aspect-[3/4] object-cover rounded-3xl border border-white/10"
+  />
+</div>
           </div>
         </div>
       </section>
