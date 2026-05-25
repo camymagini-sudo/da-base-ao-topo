@@ -1,3 +1,5 @@
+import './globals.css';
+
 export const metadata = {
   title: 'Da Base ao Topo',
   description: 'O Mundo Corporativo Real',
