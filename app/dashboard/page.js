@@ -357,130 +357,79 @@ const communityQuestions = [
 
         </div>
 
-        {/* COMUNIDADE */}
-        <div>
+       {/* COMUNIDADE */}
+<div>
 
-          <div className="flex items-center justify-between mb-8">
+  <div className="flex items-center justify-between mb-8">
 
-            <div>
+    <div>
 
-              <p className="text-zinc-500 uppercase tracking-[0.2em] text-sm mb-3">
-                Comunidade • Q&A
-              </p>
+      <p className="text-zinc-500 uppercase tracking-[0.2em] text-sm mb-3">
+        Comunidade • Q&A
+      </p>
 
-              <h3 className="text-4xl font-bold">
-                Perguntas recentes
-              </h3>
+      <h3 className="text-4xl font-bold">
+        Discussões da comunidade
+      </h3>
 
-            </div>
+    </div>
 
-            <button className="bg-white text-black px-6 py-4 rounded-2xl font-semibold hover:bg-zinc-200 transition">
-              Fazer pergunta
-            </button>
+    <a
+      href="/community"
+      className="bg-white text-black px-6 py-4 rounded-2xl font-semibold hover:bg-zinc-200 transition"
+    >
+      Fazer pergunta
+    </a>
 
-          </div>
+  </div>
 
-          <div className="space-y-6">
+  <a href="/community">
 
-            <div className="bg-zinc-900 border border-white/10 rounded-[28px] p-8">
+    <div className="bg-zinc-900 border border-white/10 rounded-[32px] p-10 hover:border-white/20 transition duration-500">
 
-              <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-8">
 
-                <p className="text-zinc-500 text-sm">
-                  Supervisora • São Paulo • há 2 horas
-                </p>
+        <p className="text-zinc-500 text-sm">
+          {communityQuestions[currentQuestion].role}
+        </p>
 
-                <div className="bg-zinc-800 px-4 py-2 rounded-full text-sm">
-                  Promoção
-                </div>
-
-              </div>
-
-              <h4 className="text-2xl font-bold mb-4">
-                Entrego resultado há meses, mas nunca sou considerada nas movimentações internas.
-              </h4>
-
-              <p className="text-zinc-400 leading-relaxed">
-                Sinto que pessoas com mais relacionamento político acabam tendo mais visibilidade do que quem performa operacionalmente.
-              </p>
-
-            </div>
-
-            <div className="bg-zinc-900 border border-white/10 rounded-[28px] p-8">
-
-              <div className="flex items-center justify-between mb-6">
-
-                <p className="text-zinc-500 text-sm">
-                  Analista Sênior • Curitiba • há 5 horas
-                </p>
-
-                <div className="bg-zinc-800 px-4 py-2 rounded-full text-sm">
-                  Liderança
-                </div>
-
-              </div>
-
-              <h4 className="text-2xl font-bold mb-4">
-                Como saber se estou pronta para gestão ou apenas absorvendo mais responsabilidade?
-              </h4>
-
-              <p className="text-zinc-400 leading-relaxed">
-                Tenho liderado projetos, treinado pessoas e resolvido crises, mas nunca recebo movimentação formal.
-              </p>
-
-            </div>
-
-            <div className="bg-zinc-900 border border-white/10 rounded-[28px] p-8">
-
-              <div className="flex items-center justify-between mb-6">
-
-                <p className="text-zinc-500 text-sm">
-                  Coordenadora • Recife • há 8 horas
-                </p>
-
-                <div className="bg-zinc-800 px-4 py-2 rounded-full text-sm">
-                  Política Corporativa
-                </div>
-
-              </div>
-
-              <h4 className="text-2xl font-bold mb-4">
-                Como desenvolver influência sem parecer interesseira ou artificial?
-              </h4>
-
-              <p className="text-zinc-400 leading-relaxed">
-                Percebo que networking interno pesa muito, mas ainda tenho dificuldade em me posicionar estrategicamente.
-              </p>
-
-            </div>
-
-            <div className="bg-zinc-900 border border-white/10 rounded-[28px] p-8">
-
-              <div className="flex items-center justify-between mb-6">
-
-                <p className="text-zinc-500 text-sm">
-                  Gerente Operacional • Belo Horizonte • há 1 dia
-                </p>
-
-                <div className="bg-zinc-800 px-4 py-2 rounded-full text-sm">
-                  Gestão de Crise
-                </div>
-
-              </div>
-
-              <h4 className="text-2xl font-bold mb-4">
-                Como manter autoridade em operações sob pressão sem desgastar completamente a equipe?
-              </h4>
-
-              <p className="text-zinc-400 leading-relaxed">
-                KPI agressivo, absenteísmo alto e turnover constante estão afetando diretamente o clima operacional.
-              </p>
-
-            </div>
-
-          </div>
-
+        <div className="bg-zinc-800 px-4 py-2 rounded-full text-sm">
+          {communityQuestions[currentQuestion].tag}
         </div>
+
+      </div>
+
+      <h4 className="text-3xl font-bold mb-6 leading-tight max-w-4xl">
+        {communityQuestions[currentQuestion].title}
+      </h4>
+
+      <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl">
+        {communityQuestions[currentQuestion].text}
+      </p>
+
+      <div className="flex gap-3 mt-8">
+
+        {communityQuestions.map((_, index) => (
+
+          <div
+            key={index}
+            className={`h-2 rounded-full transition-all duration-500 ${
+              currentQuestion === index
+                ? "bg-white w-12"
+                : "bg-zinc-700 w-4"
+            }`}
+          />
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </a>
+
+</div>
+            </div>
 
       </section>
 
