@@ -1,153 +1,185 @@
-"use client";
-
 export default function CheckoutPage() {
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-20">
+    <main className="min-h-screen bg-black text-white px-6 py-16">
+      <div className="max-w-7xl mx-auto">
 
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
+        {/* HEADER */}
+        <div className="mb-16 text-center">
 
-        {/* ESQUERDA */}
-        <div>
-
-          <p className="uppercase tracking-[0.3em] text-zinc-500 text-sm mb-6">
-            Checkout Seguro
+          <p className="text-xs tracking-[0.3em] text-zinc-500 uppercase mb-4">
+            O Mundo Corporativo Real
           </p>
 
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-8">
-            Acesso à Plataforma Premium
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Escolha seu acesso
           </h1>
 
-          <p className="text-xl text-zinc-300 leading-relaxed mb-10">
-            Biblioteca estratégica corporativa, frameworks reais, gestão de crise, liderança global, performance e conteúdos exclusivos liberados semanalmente.
+          <p className="text-zinc-400 text-xl max-w-3xl mx-auto leading-relaxed">
+            Escolha o formato ideal para acelerar sua evolução profissional,
+            liderança e crescimento estratégico.
           </p>
-
-          <div className="space-y-5">
-
-            <div className="flex items-center gap-4 bg-zinc-900 border border-white/10 rounded-2xl p-5">
-              <div className="w-3 h-3 rounded-full bg-green-500" />
-              <p className="text-zinc-200">
-                Acesso vitalício
-              </p>
-            </div>
-
-            <div className="flex items-center gap-4 bg-zinc-900 border border-white/10 rounded-2xl p-5">
-              <div className="w-3 h-3 rounded-full bg-green-500" />
-              <p className="text-zinc-200">
-                Novos conteúdos adicionados continuamente
-              </p>
-            </div>
-
-            <div className="flex items-center gap-4 bg-zinc-900 border border-white/10 rounded-2xl p-5">
-              <div className="w-3 h-3 rounded-full bg-green-500" />
-              <p className="text-zinc-200">
-                Espaço exclusivo de perguntas e respostas
-              </p>
-            </div>
-
-            <div className="flex items-center gap-4 bg-zinc-900 border border-white/10 rounded-2xl p-5">
-              <div className="w-3 h-3 rounded-full bg-green-500" />
-              <p className="text-zinc-200">
-                Garantia de 7 dias
-              </p>
-            </div>
-
-          </div>
 
         </div>
 
-        {/* DIREITA */}
-        <div className="bg-zinc-900 border border-white/10 rounded-[32px] p-10 sticky top-10">
+        {/* PLANOS */}
+        <div className="grid lg:grid-cols-3 gap-8">
 
-          <div className="mb-8">
+          {/* PLATAFORMA */}
+          <div className="bg-zinc-950 border border-white/10 rounded-[32px] p-8 flex flex-col">
 
-            <p className="text-zinc-500 line-through text-2xl mb-2">
-              R$197
+            <p className="text-zinc-500 uppercase tracking-[0.2em] text-sm mb-6">
+              Plataforma
             </p>
 
-            <div className="flex items-end gap-4 mb-3">
+            <h2 className="text-3xl font-bold mb-4">
+              Acesso Estratégico
+            </h2>
 
-              <span className="text-7xl font-bold">
-                R$109
-              </span>
-
-              <span className="text-zinc-400 mb-3">
-                lançamento
-              </span>
-
-            </div>
-
-            <p className="text-zinc-500">
-              pagamento único • acesso vitalício
+            <p className="text-zinc-400 leading-relaxed mb-8">
+              Biblioteca executiva, frameworks reais, conteúdos semanais,
+              templates e perguntas & respostas da comunidade.
             </p>
 
-          </div>
+            <div className="mb-8">
+              <p className="text-zinc-500 line-through text-xl">
+                R$197
+              </p>
 
-          <div className="border-t border-white/10 pt-8 space-y-5">
+              <div className="flex items-end gap-2">
+                <span className="text-5xl font-bold">
+                  R$109
+                </span>
 
-            <div>
-
-              <label className="text-sm text-zinc-400 mb-2 block">
-                Nome completo
-              </label>
-
-              <input
-                type="text"
-                placeholder="Seu nome"
-                className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-white/30"
-              />
-
+                <span className="text-zinc-400 mb-1">
+                  acesso vitalício
+                </span>
+              </div>
             </div>
 
-            <div>
+            <ul className="space-y-4 text-zinc-300 mb-10 flex-1">
+              <li>• Conteúdos liberados semanalmente</li>
+              <li>• Biblioteca estratégica</li>
+              <li>• Templates executivos</li>
+              <li>• Perguntas & Respostas</li>
+              <li>• Atualizações futuras</li>
+            </ul>
 
-              <label className="text-sm text-zinc-400 mb-2 block">
-                Email
-              </label>
-
-              <input
-                type="email"
-                placeholder="seuemail@email.com"
-                className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-white/30"
-              />
-
-            </div>
-
-            <div>
-
-              <label className="text-sm text-zinc-400 mb-2 block">
-                Forma de pagamento
-              </label>
-
-              <select className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-white/30">
-
-                <option>PIX</option>
-                <option>Cartão de Crédito</option>
-                <option>Boleto</option>
-
-              </select>
-
-            </div>
-
-            <button className="w-full bg-white text-black py-5 rounded-2xl font-semibold text-lg hover:scale-[1.02] transition-transform">
-
-              Finalizar pagamento
-
+            <button className="w-full bg-white text-black rounded-2xl py-4 font-semibold hover:bg-zinc-200 transition">
+              Escolher Plataforma
             </button>
 
           </div>
 
-          <div className="mt-8 pt-8 border-t border-white/10">
+          {/* MENTORIA */}
+          <div className="bg-zinc-950 border border-white/10 rounded-[32px] p-8 flex flex-col">
 
-            <p className="text-sm text-zinc-500 leading-relaxed">
-              Ao finalizar sua compra você receberá acesso imediato à plataforma e aos conteúdos disponíveis da semana atual.
+            <p className="text-zinc-500 uppercase tracking-[0.2em] text-sm mb-6">
+              Mentoria
             </p>
+
+            <h2 className="text-3xl font-bold mb-4">
+              Mentoria Individual
+            </h2>
+
+            <p className="text-zinc-400 leading-relaxed mb-8">
+              Sessões estratégicas individuais focadas em liderança,
+              crescimento, performance, gestão e posicionamento executivo.
+            </p>
+
+            <div className="mb-8">
+              <p className="text-zinc-500 line-through text-xl">
+                R$1.000
+              </p>
+
+              <div className="flex items-end gap-2">
+                <span className="text-5xl font-bold">
+                  R$500
+                </span>
+
+                <span className="text-zinc-400 mb-1">
+                  lançamento
+                </span>
+              </div>
+            </div>
+
+            <ul className="space-y-4 text-zinc-300 mb-10 flex-1">
+              <li>• Sessões individuais</li>
+              <li>• Plano estratégico profissional</li>
+              <li>• Revisão de carreira</li>
+              <li>• Crescimento para liderança</li>
+              <li>• Direcionamento executivo</li>
+            </ul>
+
+            <button className="w-full border border-white/20 rounded-2xl py-4 font-semibold hover:bg-white hover:text-black transition">
+              Escolher Mentoria
+            </button>
+
+          </div>
+
+          {/* COMBO */}
+          <div className="relative bg-white text-black rounded-[32px] p-8 flex flex-col overflow-hidden">
+
+            <div className="absolute top-5 right-5 bg-black text-white text-xs px-4 py-2 rounded-full uppercase tracking-[0.2em]">
+              Mais escolhido
+            </div>
+
+            <p className="uppercase tracking-[0.2em] text-sm mb-6 text-zinc-600">
+              Combo Executivo
+            </p>
+
+            <h2 className="text-3xl font-bold mb-4">
+              Plataforma + Mentoria
+            </h2>
+
+            <p className="text-zinc-700 leading-relaxed mb-8">
+              Acesso completo à plataforma + acompanhamento individual
+              estratégico para acelerar sua evolução profissional.
+            </p>
+
+            <div className="mb-8">
+              <p className="text-zinc-500 line-through text-xl">
+                R$1.197
+              </p>
+
+              <div className="flex items-end gap-2">
+                <span className="text-5xl font-bold">
+                  R$549
+                </span>
+
+                <span className="text-zinc-600 mb-1">
+                  oferta lançamento
+                </span>
+              </div>
+            </div>
+
+            <ul className="space-y-4 mb-10 flex-1">
+              <li>• Tudo da plataforma</li>
+              <li>• Mentoria individual</li>
+              <li>• Prioridade no suporte</li>
+              <li>• Direcionamento estratégico</li>
+              <li>• Crescimento acelerado</li>
+            </ul>
+
+            <button className="w-full bg-black text-white rounded-2xl py-4 font-semibold hover:bg-zinc-800 transition">
+              Escolher Combo Executivo
+            </button>
 
           </div>
 
         </div>
 
-      </div>
+        {/* RODAPÉ */}
+        <div className="mt-20 text-center">
 
+          <p className="text-zinc-500 text-sm max-w-2xl mx-auto leading-relaxed">
+            Após o pagamento, seu acesso será liberado automaticamente.
+            Os conteúdos da plataforma são liberados semanalmente para melhor
+            absorção prática e estratégica.
+          </p>
+
+        </div>
+
+      </div>
     </main>
   );
 }
