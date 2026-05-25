@@ -64,9 +64,13 @@ export default function CheckoutPage() {
               <li>• Atualizações futuras</li>
             </ul>
 
-            <button className="w-full bg-white text-black rounded-2xl py-4 font-semibold hover:bg-zinc-200 transition">
-              Escolher Plataforma
-            </button>
+<a
+  href="https://mpago.la/25BRre1"
+  target="_blank"
+  className="block w-full bg-white text-black rounded-2xl py-4 font-semibold hover:bg-zinc-200 transition text-center"
+>
+  Escolher Plataforma
+</a>
 
           </div>
 
@@ -110,9 +114,13 @@ export default function CheckoutPage() {
               <li>• Direcionamento executivo</li>
             </ul>
 
-            <button className="w-full border border-white/20 rounded-2xl py-4 font-semibold hover:bg-white hover:text-black transition">
-              Escolher Mentoria
-            </button>
+<a
+  href="https://mpago.la/33DkRz8"
+  target="_blank"
+  className="block w-full border border-white/20 rounded-2xl py-4 font-semibold hover:bg-white hover:text-black transition text-center"
+>
+  Escolher Mentoria
+</a>
 
           </div>
 
@@ -160,9 +168,13 @@ export default function CheckoutPage() {
               <li>• Crescimento acelerado</li>
             </ul>
 
-            <button className="w-full bg-black text-white rounded-2xl py-4 font-semibold hover:bg-zinc-800 transition">
-              Escolher Combo Executivo
-            </button>
+<a
+  href="https://mpago.la/2orAoTG"
+  target="_blank"
+  className="block w-full bg-black text-white rounded-2xl py-4 font-semibold hover:bg-zinc-800 transition text-center"
+>
+  Escolher Combo Executivo
+</a>
 
           </div>
 
