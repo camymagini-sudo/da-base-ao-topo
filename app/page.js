@@ -127,9 +127,13 @@ export default function CorporateGrowthSite() {
                 acesso vitalício
               </p>
 
-</div>
+                </div>
 
-    </div>
+              </div>
+
+            </div>
+
+          </div>
 
 </section>
 
