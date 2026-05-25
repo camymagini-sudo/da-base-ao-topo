@@ -45,19 +45,19 @@ export default function CorporateGrowthSite() {
     {
       name: 'Gerente Operacional',
       role: 'Operação Local',
-      text: 'Camila consistently demonstrated a high level of professionalism, organization and commitment to results. Even in high-pressure situations, she remained calm and guided the team with clarity. Her communication style is clear, approachable and highly effective for team alignment.',
+      text: 'Camila sempre demonstrou um nível excepcional de profissionalismo, organização e compromisso com resultados. Mesmo em ambientes de alta pressão, conseguia manter clareza e direcionar o time com segurança. Sua comunicação é clara, acessível e extremamente eficiente para alinhamento de equipes.',
     },
 
     {
       name: 'Ex-Líder Qualidade e Treinamento',
       role: 'Global Operations',
-      text: 'Camila demonstrated exceptional competence in managing and implementing complex processes. Her greatest differentiator is the ability to drive scalable results while combining strategic vision with exemplary interpersonal skills.',
+      text: 'Camila demonstrava uma capacidade excepcional na gestão e implementação de processos complexos. Seu maior diferencial sempre foi unir visão estratégica, escalabilidade e habilidades interpessoais extremamente fortes para gerar resultados consistentes.',
     },
 
     {
       name: 'Parceiro de Projeto',
       role: 'Customer Experience',
-      text: 'Camila operates several steps ahead. She combines sharp analytical thinking with strong business vision, anticipating risks, identifying opportunities and building scalable solutions with long-term impact.',
+      text: 'Camila sempre operava alguns passos à frente, conectando pensamento analítico, visão de negócio e impacto de longo prazo. Sua capacidade de antecipar riscos, identificar oportunidades e construir soluções escaláveis é um dos seus maiores diferenciais.',
     },
   ];
 
