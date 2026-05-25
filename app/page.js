@@ -303,41 +303,67 @@ export default function CorporateGrowthSite() {
       {/* MENTORIA */}
       <section className="px-6 py-24 md:px-16 lg:px-24 border-b border-white/10">
 
-        <div className="max-w-5xl mx-auto text-center">
+       <section className="px-6 py-24 md:px-16 lg:px-24 border-b border-white/10">
+  <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
-          <p className="uppercase tracking-[0.35em] text-sm text-zinc-500 mb-6">
-            Mentoria Estratégica
-          </p>
+    {/* TEXTO */}
+    <div>
+      <p className="text-sm tracking-[0.3em] text-zinc-500 uppercase mb-6">
+        Mentoria Estratégica
+      </p>
 
-          <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-8">
-            Mentoria personalizada para crescimento corporativo.
-          </h2>
+      <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-8">
+        Mentoria personalizada para crescimento corporativo.
+      </h2>
 
-          <p className="text-xl text-zinc-300 leading-relaxed mb-12">
-            Sessões práticas focadas em posicionamento, liderança, performance, gestão política corporativa e crescimento estratégico.
-          </p>
+      <p className="text-zinc-300 text-xl leading-relaxed max-w-2xl">
+        Sessões práticas focadas em posicionamento, liderança,
+        performance, gestão política corporativa e crescimento estratégico.
+      </p>
 
-          <div className="bg-zinc-900 border border-white/10 rounded-[32px] p-12 inline-block">
+      <div className="mt-10 space-y-4 text-zinc-300">
+        <p>• Estratégia de crescimento profissional</p>
+        <p>• Revisão de posicionamento executivo</p>
+        <p>• Desenvolvimento de liderança</p>
+        <p>• Planejamento de promoções e movimentações</p>
+        <p>• Gestão de crise e influência corporativa</p>
+      </div>
+    </div>
 
-            <p className="text-zinc-500 line-through text-2xl mb-2">
-              R$1000
-            </p>
+    {/* CARD PREÇO */}
+    <div className="bg-zinc-900/80 border border-white/10 rounded-[32px] p-12 backdrop-blur flex flex-col justify-center">
 
-            <div className="flex items-end justify-center gap-4">
+      <p className="text-zinc-500 line-through text-3xl mb-2">
+        R$1000
+      </p>
 
-              <span className="text-7xl font-bold">
-                R$500
-              </span>
+      <div className="flex items-end gap-3 mb-6">
+        <h3 className="text-6xl font-bold">
+          R$500
+        </h3>
 
-              <span className="text-zinc-400 mb-3">
-                lançamento
-              </span>
+        <span className="text-zinc-400 mb-2">
+          lançamento
+        </span>
+      </div>
 
-            </div>
+      <p className="text-zinc-400 mb-10">
+        pacote com 4 sessões estratégicas
+      </p>
 
-            <p className="text-zinc-500 mt-4 text-lg">
-              pacote com 4 sessões estratégicas
-            </p>
+      <div className="space-y-4 text-zinc-300 mb-10">
+        <p>• Sessões individuais ao vivo</p>
+        <p>• Plano estratégico profissional</p>
+        <p>• Diagnóstico de carreira</p>
+        <p>• Direcionamento executivo</p>
+      </div>
+
+      <a
+        href="/register"
+        className="block w-full bg-white text-black rounded-2xl py-4 font-semibold hover:bg-zinc-200 transition text-center"
+      >
+        Aplicar para Mentoria
+      </a>
 
           </div>
 
