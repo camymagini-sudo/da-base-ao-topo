@@ -256,30 +256,32 @@ export default function CorporateGrowthSite() {
 
             </div>
 
-            {/* CARROSSEL */}
-            <div className="relative bg-zinc-900 border border-white/10 rounded-[32px] overflow-hidden transition-all duration-700">
+            {/* MINI CARROSSEL EXECUTIVO */}
+<div className="mt-8 border-t border-white/10 pt-8">
 
-              <img
-                src={gallery[currentImage].image}
-                alt={gallery[currentImage].title}
-                className="w-full h-[520px] object-cover"
-              />
+  <div className="bg-black/40 border border-white/10 rounded-3xl overflow-hidden max-w-[320px] transition-all duration-700">
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+    <img
+      src={gallery[currentImage].image}
+      alt={gallery[currentImage].title}
+      className="w-full h-[180px] object-cover"
+    />
 
-              <div className="absolute bottom-0 left-0 right-0 p-8">
+    <div className="p-5">
 
-                <p className="text-3xl font-bold mb-3">
-                  {gallery[currentImage].title}
-                </p>
+      <p className="text-xl font-semibold mb-2">
+        {gallery[currentImage].title}
+      </p>
 
-                <p className="text-zinc-300 text-lg">
-                  {gallery[currentImage].description}
-                </p>
+      <p className="text-sm text-zinc-400 leading-relaxed">
+        {gallery[currentImage].description}
+      </p>
 
-              </div>
+    </div>
 
-            </div>
+  </div>
+
+</div>
 
           </div>
 
