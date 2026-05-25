@@ -194,67 +194,103 @@ export default function CorporateGrowthSite() {
 
           </div>
 
-          <div className="space-y-8">
+         <div>
 
-            <div className="bg-zinc-900 border border-white/10 rounded-[32px] p-10">
+  <div className="bg-zinc-900 border border-white/10 rounded-[32px] p-8 h-full flex flex-col justify-between">
 
-              <div className="grid grid-cols-2 gap-10 mb-10">
+    {/* MÉTRICAS */}
+    <div>
 
-                <div>
-                  <p className="text-6xl font-bold mb-2">7</p>
-                  <p className="text-zinc-400">
-                    promoções ao longo da carreira corporativa
-                  </p>
-                </div>
+      <div className="grid grid-cols-2 gap-8 mb-8">
 
-                <div>
-                  <p className="text-6xl font-bold mb-2">5</p>
-                  <p className="text-zinc-400">
-                    áreas de atuação estratégica
-                  </p>
-                </div>
+        <div>
+          <p className="text-5xl font-bold mb-1">7</p>
+          <p className="text-zinc-400 text-sm leading-relaxed">
+            promoções ao longo da carreira corporativa
+          </p>
+        </div>
 
-                <div>
-                  <p className="text-6xl font-bold mb-2">Global</p>
-                  <p className="text-zinc-400">
-                    experiência multinacional em gestão
-                  </p>
-                </div>
+        <div>
+          <p className="text-5xl font-bold mb-1">5</p>
+          <p className="text-zinc-400 text-sm leading-relaxed">
+            áreas de atuação estratégica
+          </p>
+        </div>
 
-                <div>
-                  <p className="text-6xl font-bold mb-2">10</p>
-                  <p className="text-zinc-400">
-                    anos em operações, performance e liderança
-                  </p>
-                </div>
+        <div>
+          <p className="text-5xl font-bold mb-1">Global</p>
+          <p className="text-zinc-400 text-sm leading-relaxed">
+            experiência multinacional em gestão
+          </p>
+        </div>
 
-              </div>
+        <div>
+          <p className="text-5xl font-bold mb-1">10</p>
+          <p className="text-zinc-400 text-sm leading-relaxed">
+            anos em operações, performance e liderança
+          </p>
+        </div>
 
-              <div className="border-t border-white/10 pt-8">
+      </div>
 
-                <h3 className="text-4xl font-bold mb-4">
-                  Escalada profissional
-                </h3>
+      {/* ESCALADA */}
+      <div className="border-t border-white/10 pt-6">
 
-                <p className="text-zinc-300 text-xl leading-relaxed">
-                  Especialista • Supervisor • Coordenadora • Gerente • Gerente Sênior • Gerente Global
-                </p>
+        <h3 className="text-3xl font-bold mb-3">
+          Escalada profissional
+        </h3>
 
-              </div>
+        <p className="text-zinc-300 leading-relaxed">
+          Especialista • Supervisor • Coordenadora • Gerente • Gerente Sênior • Gerente Global
+        </p>
 
-              <div className="border-t border-white/10 pt-8 mt-8">
+      </div>
 
-                <h3 className="text-4xl font-bold mb-4">
-                  Áreas de atuação
-                </h3>
+      {/* ÁREAS */}
+      <div className="border-t border-white/10 pt-6 mt-6">
 
-                <p className="text-zinc-300 text-xl leading-relaxed">
-                  Qualidade • Treinamento • Operações • Processos • Projetos
-                </p>
+        <h3 className="text-3xl font-bold mb-3">
+          Áreas de atuação
+        </h3>
 
-              </div>
+        <p className="text-zinc-300 leading-relaxed">
+          Qualidade • Treinamento • Operações • Processos • Projetos
+        </p>
 
-            </div>
+      </div>
+
+    </div>
+
+    {/* MINI SHOWCASE */}
+    <div className="border-t border-white/10 pt-6 mt-8">
+
+      <div className="flex items-center gap-4 bg-black/30 border border-white/10 rounded-2xl overflow-hidden">
+
+        <img
+          src={gallery[currentImage].image}
+          alt={gallery[currentImage].title}
+          className="w-[140px] h-[110px] object-cover"
+        />
+
+        <div className="pr-4">
+
+          <p className="font-semibold text-lg mb-1">
+            {gallery[currentImage].title}
+          </p>
+
+          <p className="text-zinc-400 text-sm leading-relaxed">
+            {gallery[currentImage].description}
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
             {/* MINI CARROSSEL EXECUTIVO */}
 <div className="mt-8 border-t border-white/10 pt-8">
