@@ -429,7 +429,6 @@ const communityQuestions = [
   </a>
 
 </div>
-            </div>
 
       </section>
 
