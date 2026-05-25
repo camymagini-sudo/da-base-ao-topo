@@ -76,9 +76,12 @@ export default function CorporateGrowthSite() {
 
             <div className="flex flex-wrap gap-4">
 
-              <button className="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition-transform">
-                Entrar para a Plataforma
-              </button>
+<a
+  href="/login"
+  className="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition-transform inline-block"
+>
+  Entrar para a Plataforma
+</a>
 
               <button className="border border-white/20 px-8 py-4 rounded-2xl hover:bg-white/10 transition">
                 Conhecer Mentoria
