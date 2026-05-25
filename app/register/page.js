@@ -285,9 +285,9 @@ export default function RegisterPage() {
           </div>
 
           {/* BOTÃO */}
-          <button className="w-full bg-white text-black rounded-2xl py-5 font-semibold text-lg hover:bg-zinc-200 transition">
-            Criar conta e continuar
-          </button>
+<button className="w-full bg-white text-black rounded-2xl py-5 font-semibold text-lg hover:bg-zinc-200 transition">
+  Criar conta e continuar
+</button>
 
           {/* LOGIN */}
           <div className="border-t border-white/10 mt-10 pt-8 text-center">
