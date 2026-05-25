@@ -83,9 +83,12 @@ export default function CorporateGrowthSite() {
   Entrar para a Plataforma
 </a>
 
-              <button className="border border-white/20 px-8 py-4 rounded-2xl hover:bg-white/10 transition">
-                Conhecer Mentoria
-              </button>
+<a
+  href="/checkout"
+  className="border border-white/20 px-8 py-4 rounded-2xl hover:bg-white hover:text-black transition"
+>
+  Conhecer Mentoria
+</a>
 
             </div>
 
