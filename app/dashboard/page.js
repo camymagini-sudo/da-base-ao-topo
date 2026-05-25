@@ -139,8 +139,7 @@ export default function DashboardPage() {
               </p>
 
               <p className="text-zinc-400 leading-relaxed">
-                Durante os primeiros 7 dias, novos conteúdos são liberados gradualmente.
-                Após esse período, toda a plataforma será desbloqueada automaticamente
+                Após os primeiros 7 dias, toda a plataforma será desbloqueada automaticamente
                 para você acessar no seu próprio ritmo.
               </p>
 
