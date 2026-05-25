@@ -19,6 +19,66 @@ export default function CorporateGrowthSite() {
     },
   ];
 
+const expertise = [
+  {
+    title: "Posicionamento Corporativo",
+    description:
+      "Como ser percebida como liderança antes mesmo do cargo.",
+  },
+
+  {
+    title: "Performance & KPI",
+    description:
+      "Como construir reputação através de resultado estratégico.",
+  },
+
+  {
+    title: "Liderança Estratégica",
+    description:
+      "Gestão de pessoas, influência, conflitos e autoridade executiva.",
+  },
+
+  {
+    title: "Política Corporativa",
+    description:
+      "Como navegar ambientes corporativos sem ingenuidade.",
+  },
+
+  {
+    title: "Gestão de Crise",
+    description:
+      "Como ganhar visibilidade positiva em ambientes de pressão.",
+  },
+
+  {
+    title: "Promoções & Escalada",
+    description:
+      "Estratégias reais para acelerar crescimento profissional.",
+  },
+
+  {
+    title: "Operações Globais",
+    description:
+      "Visão multinacional, governança e stakeholders globais.",
+  },
+
+  {
+    title: "Templates Executivos",
+    description:
+      "Ferramentas reais utilizadas em liderança e gestão.",
+  },
+];
+
+const [currentExpertise, setCurrentExpertise] = useState(0);
+
+useEffect(() => {
+  const expertiseInterval = setInterval(() => {
+    setCurrentExpertise((prev) => (prev + 1) % expertise.length);
+  }, 4000);
+
+  return () => clearInterval(expertiseInterval);
+}, []);
+  
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -368,7 +428,70 @@ export default function CorporateGrowthSite() {
         </div>
 
       </section>
+{/* EXPERTISE */}
+<section className="px-6 py-24 md:px-16 lg:px-24 border-b border-white/10">
 
+  <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+    {/* TEXTO */}
+    <div>
+
+      <p className="uppercase tracking-[0.3em] text-sm text-zinc-500 mb-6">
+        O que você vai desenvolver
+      </p>
+
+      <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-8">
+        Estratégias reais do mundo corporativo.
+      </h2>
+
+      <p className="text-zinc-300 text-xl leading-relaxed max-w-2xl">
+        Conteúdos práticos, frameworks executivos e experiências reais aplicadas em operações, liderança, performance e crescimento corporativo.
+      </p>
+
+    </div>
+
+    {/* CARD DINÂMICO */}
+    <div className="relative bg-zinc-900 border border-white/10 rounded-[32px] overflow-hidden p-10 min-h-[340px] flex flex-col justify-between transition-all duration-700">
+
+      <div>
+
+        <p className="text-zinc-500 uppercase tracking-[0.2em] text-sm mb-6">
+          Conteúdo Estratégico
+        </p>
+
+        <h3 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+          {expertise[currentExpertise].title}
+        </h3>
+
+        <p className="text-zinc-300 text-xl leading-relaxed">
+          {expertise[currentExpertise].description}
+        </p>
+
+      </div>
+
+      {/* BARRAS */}
+      <div className="flex gap-2 mt-12">
+
+        {expertise.map((_, index) => (
+
+          <div
+            key={index}
+            className={`h-1 rounded-full transition-all duration-500 ${
+              currentExpertise === index
+                ? "w-16 bg-white"
+                : "w-8 bg-zinc-700"
+            }`}
+          />
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
       {/* FEEDBACKS */}
       <section className="px-6 py-24 md:px-16 lg:px-24">
 
