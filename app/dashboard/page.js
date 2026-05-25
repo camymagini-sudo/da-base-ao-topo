@@ -53,6 +53,8 @@ const communityQuestions = [
   
   const [contentUnlocked] = useState(false);
 
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
   return (
     <main className="min-h-screen bg-black text-white flex">
 
