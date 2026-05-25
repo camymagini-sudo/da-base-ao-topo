@@ -1,173 +1,156 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 export default function CorporateGrowthSite() {
-  const modules = [
+
+  const gallery = [
     {
-      title: 'Da Base à Liderança',
+      image: "/palestra.jpg",
+      title: "Palestra Motivacional",
       description:
-        'Lições práticas sobre crescimento corporativo, visibilidade interna, promoções e posicionamento profissional.',
+        "Carreira, liderança feminina e desenvolvimento profissional.",
     },
+
     {
-      title: 'Gestão & Performance',
+      image: "/lideranca.jpg",
+      title: "Liderança & Gestão",
       description:
-        'KPIs, gestão de crise, liderança de times, absenteísmo, performance operacional e tomada de decisão.',
-    },
-    {
-      title: 'Mundo Corporativo Real',
-      description:
-        'Política corporativa, stakeholders, comunicação executiva, influência e sobrevivência em ambientes de alta pressão.',
-    },
-    {
-      title: 'IA no Trabalho',
-      description:
-        'Como usar IA para produtividade, análise, apresentações, organização e diferenciação profissional.',
+        "Atuação como Gerente Sênior liderando operações e gestores.",
     },
   ];
 
-  const mentorshipSteps = [
-    {
-      title: 'Sessão 1 — Diagnóstico Profundo',
-      text: 'Mapeamento da sua trajetória, objetivos, gaps, posicionamento e desafios atuais.',
-    },
-    {
-      title: 'Sessão 2 — Estratégia de Crescimento',
-      text: 'Plano prático de evolução profissional, promoção ou transição.',
-    },
-    {
-      title: 'Sessão 3 — Desafios Reais',
-      text: 'Discussão de conflitos, liderança, política corporativa, entrevistas e situações críticas.',
-    },
-    {
-      title: 'Sessão 4 — Refinamento & Próximos Passos',
-      text: 'Plano de ação de 90 dias com direcionamento personalizado.',
-    },
-  ];
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % gallery.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const testimonials = [
     {
-      name: 'Gerente Operacional',
-      role: 'Operação Local',
-      text: 'Camila sempre demonstrou um nível excepcional de profissionalismo, organização e compromisso com resultados. Mesmo em ambientes de alta pressão, conseguia manter clareza e direcionar o time com segurança.',
+      text:
+        "Camila demonstrou um nível extremamente alto de profissionalismo, organização e foco em resultados. Mesmo em ambientes de alta pressão, manteve clareza, liderança e capacidade de direcionar equipes com eficiência.",
+      name: "Gerente Operacional",
+      role: "Operação Local",
     },
 
     {
-      name: 'Ex-Líder Qualidade e Treinamento',
-      role: 'Global Operations',
-      text: 'Camila demonstrava uma capacidade excepcional na gestão e implementação de processos complexos. Seu maior diferencial sempre foi unir visão estratégica, escalabilidade e habilidades interpessoais extremamente fortes.',
+      text:
+        "Seu maior diferencial é a capacidade de gerar resultados escaláveis e estruturar operações complexas com visão estratégica. Camila agrega valor real para performance, cultura e crescimento organizacional.",
+      name: "Ex-Líder Qualidade & Treinamento",
+      role: "Global Operations",
     },
 
     {
-      name: 'Parceiro de Projeto',
-      role: 'Customer Experience',
-      text: 'Camila sempre operava alguns passos à frente, conectando pensamento analítico, visão de negócio e impacto de longo prazo.',
+      text:
+        "Camila possui uma visão estratégica rara. Atua antecipando riscos, estruturando soluções sustentáveis e elevando a qualidade operacional com foco em impacto de longo prazo.",
+      name: "Parceiro de Projeto",
+      role: "Customer Experience",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <main className="bg-black text-white min-h-screen">
 
       {/* HERO */}
-      <section className="px-6 py-20 md:px-16 lg:px-24 border-b border-white/10">
+      <section className="px-6 py-24 md:px-16 lg:px-24 border-b border-white/10">
 
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
           <div>
 
-            <p className="uppercase tracking-[0.3em] text-sm text-zinc-400 mb-5">
+            <p className="uppercase tracking-[0.35em] text-sm text-zinc-500 mb-6">
               O Mundo Corporativo Real
             </p>
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-8">
-              Da Base à Liderança Global.
+            <h1 className="text-6xl md:text-7xl font-bold leading-[0.95] mb-8">
+              Da Base à Liderança Global
             </h1>
 
-            <p className="text-zinc-300 text-lg leading-relaxed mb-8 max-w-2xl">
-              Estratégias reais de crescimento corporativo baseadas em 10 anos de experiência em operações globais,
-              gestão de crise, performance, liderança e qualidade.
+            <p className="text-xl text-zinc-300 leading-relaxed max-w-2xl mb-10">
+              Estratégias reais de crescimento corporativo baseadas em 10 anos de experiência em operações globais, gestão de crise, performance, liderança e qualidade.
             </p>
 
             <div className="flex flex-wrap gap-4">
 
-              <button className="bg-white text-black px-6 py-4 rounded-2xl font-semibold hover:scale-105 transition-transform">
-                Quero acesso imediato
+              <button className="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition-transform">
+                Entrar para a Plataforma
               </button>
 
-              <button className="border border-white/20 px-6 py-4 rounded-2xl hover:bg-white/5 transition">
-                Aplicar para Mentoria
+              <button className="border border-white/20 px-8 py-4 rounded-2xl hover:bg-white/10 transition">
+                Conhecer Mentoria
               </button>
 
             </div>
+
           </div>
 
-          <div className="bg-zinc-900 rounded-3xl p-8 border border-white/10 shadow-2xl">
+          <div className="bg-zinc-900 border border-white/10 rounded-[32px] p-10 shadow-2xl">
 
-            <div className="space-y-6">
+            <p className="text-zinc-400 mb-4">
+              Inclui:
+            </p>
 
-              <div>
+            <ul className="space-y-4 text-lg text-zinc-200 mb-10">
 
-                <p className="text-zinc-400 text-sm mb-2">
-                  Inclui:
-                </p>
+              <li>• Biblioteca exclusiva de estratégias corporativas</li>
+              <li>• Casos reais e lições práticas</li>
+              <li>• Frameworks de liderança e performance</li>
+              <li>• Templates e prompts de IA</li>
+              <li>• Mentoria personalizada opcional</li>
 
-                <ul className="space-y-3 text-zinc-200">
-                  <li>• Biblioteca exclusiva de estratégias corporativas</li>
-                  <li>• Casos reais e lições práticas</li>
-                  <li>• Frameworks de liderança e performance</li>
-                  <li>• Templates e prompts de IA</li>
-                  <li>• Mentoria personalizada opcional</li>
-                </ul>
+            </ul>
+
+            <div className="border-t border-white/10 pt-6">
+
+              <p className="text-zinc-500 line-through mb-1">
+                De R$197
+              </p>
+
+              <div className="flex items-end gap-3">
+
+                <span className="text-6xl font-bold">
+                  R$109,90
+                </span>
+
+                <span className="text-zinc-400 mb-2">
+                  lançamento
+                </span>
 
               </div>
 
-              <div className="border-t border-white/10 pt-6">
+              <p className="text-zinc-500 mt-2">
+                acesso vitalício
+              </p>
 
-                <p className="text-zinc-400 text-sm mb-3">
-                  Oferta de lançamento
-                </p>
-
-                <div className="flex items-center gap-3 mb-3">
-
-                  <p className="text-zinc-500 line-through text-2xl">
-                    R$197
-                  </p>
-
-                  <div className="bg-white text-black text-xs px-3 py-1 rounded-full font-semibold">
-                    44% OFF
-                  </div>
-
-                </div>
-
-                <div className="flex items-end gap-3">
-
-                  <h2 className="text-5xl font-bold">
-                    R$109,90
-                  </h2>
-
-                  <p className="text-zinc-400 mb-1">
-                    pagamento único
-                  </p>
-
-                </div>
-              </div>
             </div>
+
           </div>
+
         </div>
+
       </section>
 
       {/* SOBRE */}
-      <section className="px-6 py-20 md:px-16 lg:px-24 border-b border-white/10">
+      <section className="px-6 py-24 md:px-16 lg:px-24 border-b border-white/10">
 
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-start">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
 
           <div>
 
-            <p className="uppercase tracking-[0.3em] text-sm text-zinc-400 mb-4">
+            <p className="uppercase tracking-[0.35em] text-sm text-zinc-500 mb-6">
               Sobre Mim
             </p>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-10">
               10 anos crescendo dentro do ambiente corporativo.
             </h2>
 
-            <div className="space-y-6 text-zinc-300 text-lg leading-relaxed">
+            <div className="space-y-8 text-zinc-300 text-xl leading-relaxed">
 
               <p>
                 Comecei minha trajetória em operações de atendimento ao cliente e cresci até posições de liderança global em operações, qualidade, performance e gestão estratégica.
@@ -182,249 +165,221 @@ export default function CorporateGrowthSite() {
               </p>
 
             </div>
-          </div>
 
-          <div className="space-y-6">
+            <div className="mt-14 pt-8 border-t border-white/10">
 
-            <div className="bg-zinc-900 rounded-[32px] border border-white/10 p-10">
-
-              <div className="grid grid-cols-2 gap-8">
-
-                <div>
-
-                  <p className="text-5xl font-bold mb-2">
-                    7
-                  </p>
-
-                  <p className="text-zinc-400">
-                    promoções ao longo da carreira corporativa
-                  </p>
-
-                </div>
-
-                <div>
-
-                  <p className="text-5xl font-bold mb-2">
-                    5
-                  </p>
-
-                  <p className="text-zinc-400">
-                    áreas de atuação estratégica
-                  </p>
-
-                </div>
-
-                <div>
-
-                  <p className="text-5xl font-bold mb-2">
-                    Global
-                  </p>
-
-                  <p className="text-zinc-400">
-                    experiência multinacional em gestão
-                  </p>
-
-                </div>
-
-                <div>
-
-                  <p className="text-5xl font-bold mb-2">
-                    10
-                  </p>
-
-                  <p className="text-zinc-400">
-                    anos em operações, performance e liderança
-                  </p>
-
-                </div>
-
-                <div className="col-span-2 border-t border-white/10 pt-6">
-
-                  <p className="text-2xl font-bold mb-4">
-                    Escalada profissional
-                  </p>
-
-                  <p className="text-zinc-300 leading-relaxed">
-                    Especialista • Supervisor • Coordenadora • Gerente • Gerente Sênior • Gerente Global
-                  </p>
-
-                </div>
-
-                <div className="col-span-2 border-t border-white/10 pt-6">
-
-                  <p className="text-2xl font-bold mb-4">
-                    Áreas de atuação
-                  </p>
-
-                  <p className="text-zinc-300 leading-relaxed">
-                    Qualidade • Treinamento • Operações • Processos • Projetos
-                  </p>
-
-                </div>
-
-              </div>
-            </div>
-
-            <div className="space-y-6">
-
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-6">
 
                 <img
                   src="/perfil.jpg"
                   alt="Camila Magini"
-                  className="w-24 h-24 rounded-full object-cover border border-white/10"
+                  className="w-28 h-28 rounded-full object-cover border-2 border-white/20 shadow-xl"
                 />
 
                 <div>
 
-                  <p className="text-2xl font-semibold text-white">
+                  <h3 className="text-3xl font-bold">
                     Camila Magini Da Costa
-                  </p>
+                  </h3>
 
-                  <p className="text-zinc-400">
+                  <p className="text-zinc-400 text-lg mt-1">
                     Global Quality Assurance Manager
                   </p>
 
                 </div>
-              </div>
 
-              <div className="bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden">
-
-                <img
-                  src="/palestra.jpg"
-                  alt="Palestra Motivacional"
-                  className="w-full h-[260px] object-cover"
-                />
-
-                <div className="p-5">
-
-                  <p className="text-lg font-semibold">
-                    Palestra Motivacional
-                  </p>
-
-                  <p className="text-zinc-400 text-sm mt-1">
-                    Carreira, liderança feminina e desenvolvimento profissional.
-                  </p>
-
-                </div>
-              </div>
-
-              <div className="bg-zinc-900 border border-white/10 rounded-3xl overflow-hidden">
-
-                <img
-                  src="/lideranca.jpg"
-                  alt="Liderança & Gestão"
-                  className="w-full h-[260px] object-cover"
-                />
-
-                <div className="p-5">
-
-                  <p className="text-lg font-semibold">
-                    Liderança & Gestão
-                  </p>
-
-                  <p className="text-zinc-400 text-sm mt-1">
-                    Atuação como Gerente Sênior liderando operações e gestores.
-                  </p>
-
-                </div>
               </div>
 
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* MÓDULOS */}
-      <section className="px-6 py-20 md:px-16 lg:px-24 border-b border-white/10">
-
-        <div className="max-w-6xl mx-auto">
-
-          <div className="mb-14 max-w-3xl">
-
-            <p className="uppercase tracking-[0.3em] text-sm text-zinc-400 mb-4">
-              O que você vai encontrar
-            </p>
-
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Uma biblioteca estratégica sobre o mundo corporativo real.
-            </h2>
 
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-8">
 
-            {modules.map((module, index) => (
+            <div className="bg-zinc-900 border border-white/10 rounded-[32px] p-10">
 
-              <div
-                key={index}
-                className="bg-zinc-900 border border-white/10 rounded-3xl p-8"
-              >
+              <div className="grid grid-cols-2 gap-10 mb-10">
 
-                <h3 className="text-2xl font-semibold mb-4">
-                  {module.title}
+                <div>
+                  <p className="text-6xl font-bold mb-2">7</p>
+                  <p className="text-zinc-400">
+                    promoções ao longo da carreira corporativa
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-6xl font-bold mb-2">5</p>
+                  <p className="text-zinc-400">
+                    áreas de atuação estratégica
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-6xl font-bold mb-2">Global</p>
+                  <p className="text-zinc-400">
+                    experiência multinacional em gestão
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-6xl font-bold mb-2">10</p>
+                  <p className="text-zinc-400">
+                    anos em operações, performance e liderança
+                  </p>
+                </div>
+
+              </div>
+
+              <div className="border-t border-white/10 pt-8">
+
+                <h3 className="text-4xl font-bold mb-4">
+                  Escalada profissional
                 </h3>
 
-                <p className="text-zinc-300 leading-relaxed">
-                  {module.description}
+                <p className="text-zinc-300 text-xl leading-relaxed">
+                  Especialista • Supervisor • Coordenadora • Gerente • Gerente Sênior • Gerente Global
                 </p>
 
               </div>
-            ))}
+
+              <div className="border-t border-white/10 pt-8 mt-8">
+
+                <h3 className="text-4xl font-bold mb-4">
+                  Áreas de atuação
+                </h3>
+
+                <p className="text-zinc-300 text-xl leading-relaxed">
+                  Qualidade • Treinamento • Operações • Processos • Projetos
+                </p>
+
+              </div>
+
+            </div>
+
+            {/* CARROSSEL */}
+            <div className="relative bg-zinc-900 border border-white/10 rounded-[32px] overflow-hidden transition-all duration-700">
+
+              <img
+                src={gallery[currentImage].image}
+                alt={gallery[currentImage].title}
+                className="w-full h-[520px] object-cover"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+
+                <p className="text-3xl font-bold mb-3">
+                  {gallery[currentImage].title}
+                </p>
+
+                <p className="text-zinc-300 text-lg">
+                  {gallery[currentImage].description}
+                </p>
+
+              </div>
+
+            </div>
 
           </div>
+
         </div>
+
+      </section>
+
+      {/* MENTORIA */}
+      <section className="px-6 py-24 md:px-16 lg:px-24 border-b border-white/10">
+
+        <div className="max-w-5xl mx-auto text-center">
+
+          <p className="uppercase tracking-[0.35em] text-sm text-zinc-500 mb-6">
+            Mentoria Estratégica
+          </p>
+
+          <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-8">
+            Mentoria personalizada para crescimento corporativo.
+          </h2>
+
+          <p className="text-xl text-zinc-300 leading-relaxed mb-12">
+            Sessões práticas focadas em posicionamento, liderança, performance, gestão política corporativa, entrevistas, promoção e crescimento estratégico.
+          </p>
+
+          <div className="bg-zinc-900 border border-white/10 rounded-[32px] p-12 inline-block">
+
+            <p className="text-zinc-500 line-through text-2xl mb-2">
+              R$1000
+            </p>
+
+            <div className="flex items-end justify-center gap-4">
+
+              <span className="text-7xl font-bold">
+                R$500
+              </span>
+
+              <span className="text-zinc-400 mb-3">
+                lançamento
+              </span>
+
+            </div>
+
+            <p className="text-zinc-500 mt-4 text-lg">
+              pacote com 4 sessões estratégicas
+            </p>
+
+          </div>
+
+        </div>
+
       </section>
 
       {/* FEEDBACKS */}
-      <section className="px-6 py-20 md:px-16 lg:px-24">
+      <section className="px-6 py-24 md:px-16 lg:px-24">
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
 
-          <div className="mb-14 max-w-3xl">
+          <p className="uppercase tracking-[0.35em] text-sm text-zinc-500 mb-6">
+            Feedbacks
+          </p>
 
-            <p className="uppercase tracking-[0.3em] text-sm text-zinc-400 mb-4">
-              Feedbacks
-            </p>
+          <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-16">
+            O impacto percebido por quem trabalhou comigo.
+          </h2>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              O impacto percebido por quem trabalhou comigo.
-            </h2>
-
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
 
             {testimonials.map((testimonial, index) => (
 
               <div
                 key={index}
-                className="bg-zinc-900 border border-white/10 rounded-3xl p-8"
+                className="bg-zinc-900 border border-white/10 rounded-[32px] p-8"
               >
 
-                <p className="text-zinc-300 leading-relaxed mb-8 italic">
-                  “{testimonial.text}”
+                <p className="text-zinc-300 leading-relaxed text-lg mb-10">
+                  "{testimonial.text}"
                 </p>
 
                 <div>
 
-                  <p className="font-semibold text-lg">
+                  <p className="font-semibold text-xl">
                     {testimonial.name}
                   </p>
 
-                  <p className="text-zinc-400 text-sm mt-1">
+                  <p className="text-zinc-500 mt-1">
                     {testimonial.role}
                   </p>
 
                 </div>
 
               </div>
+
             ))}
 
           </div>
+
         </div>
+
       </section>
 
-    </div>
+    </main>
   );
 }
