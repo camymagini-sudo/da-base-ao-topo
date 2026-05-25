@@ -1,6 +1,11 @@
 "use client";
 
+import { useState } from "react";
+
 export default function DashboardPage() {
+
+  const [contentUnlocked] = useState(false);
+
   return (
     <main className="min-h-screen bg-black text-white flex">
 
@@ -30,19 +35,19 @@ export default function DashboardPage() {
           </a>
 
           <a className="block text-zinc-500 hover:bg-zinc-900 rounded-2xl px-5 py-4 transition">
-            Semana 2 🔒
+            {!contentUnlocked ? "Semana 2 🔒" : "Semana 2"}
           </a>
 
           <a className="block text-zinc-500 hover:bg-zinc-900 rounded-2xl px-5 py-4 transition">
-            Semana 3 🔒
+            {!contentUnlocked ? "Semana 3 🔒" : "Semana 3"}
           </a>
 
           <a className="block text-zinc-500 hover:bg-zinc-900 rounded-2xl px-5 py-4 transition">
-            Semana 4 🔒
+            {!contentUnlocked ? "Semana 4 🔒" : "Semana 4"}
           </a>
 
           <a className="block text-zinc-500 hover:bg-zinc-900 rounded-2xl px-5 py-4 transition">
-            Semana 5 🔒
+            {!contentUnlocked ? "Semana 5 🔒" : "Semana 5"}
           </a>
 
           <div className="border-t border-white/10 my-6" />
@@ -102,6 +107,46 @@ export default function DashboardPage() {
             conteúdos liberados e próximos desbloqueios.
           </p>
 
+          {/* PROGRESSO */}
+          <div className="mt-8">
+
+            <div className="flex items-center justify-between mb-3">
+
+              <p className="text-sm text-zinc-400">
+                Progresso da plataforma
+              </p>
+
+              <p className="text-sm text-zinc-400">
+                20%
+              </p>
+
+            </div>
+
+            <div className="w-full bg-zinc-900 rounded-full h-3 overflow-hidden">
+
+              <div className="bg-white h-full w-[20%] rounded-full" />
+
+            </div>
+
+          </div>
+
+          {/* AVISO TEMPORÁRIO */}
+          {!contentUnlocked && (
+            <div className="mt-8 bg-zinc-900 border border-white/10 rounded-[24px] p-6">
+
+              <p className="text-white font-semibold mb-2">
+                Liberação semanal ativa
+              </p>
+
+              <p className="text-zinc-400 leading-relaxed">
+                Durante os primeiros 7 dias, novos conteúdos são liberados gradualmente.
+                Após esse período, toda a plataforma será desbloqueada automaticamente
+                para você acessar no seu próprio ritmo.
+              </p>
+
+            </div>
+          )}
+
         </div>
 
         {/* CARDS */}
@@ -133,8 +178,8 @@ export default function DashboardPage() {
               7 dias
             </h3>
 
-            <p className="text-zinc-400">
-              Semana 2 • Performance & Influência
+            <p className="text-zinc-400 leading-relaxed">
+              Novos conteúdos estratégicos são liberados automaticamente a cada 7 dias.
             </p>
 
           </div>
@@ -280,32 +325,7 @@ export default function DashboardPage() {
               <div className="flex items-center justify-between mb-6">
 
                 <p className="text-zinc-500 text-sm">
-                  Anônimo • há 2 horas
-                </p>
-
-                <div className="bg-zinc-800 px-4 py-2 rounded-full text-sm">
-                  Liderança
-                </div>
-
-              </div>
-
-              <h4 className="text-2xl font-bold mb-4">
-                Como ganhar visibilidade sem parecer arrogante?
-              </h4>
-
-              <p className="text-zinc-400 leading-relaxed">
-                Existem formas estratégicas de construir presença corporativa
-                através de comunicação, ownership e influência sem gerar rejeição política.
-              </p>
-
-            </div>
-
-            <div className="bg-zinc-900 border border-white/10 rounded-[28px] p-8">
-
-              <div className="flex items-center justify-between mb-6">
-
-                <p className="text-zinc-500 text-sm">
-                  Público • há 5 horas
+                  Supervisora • São Paulo • há 2 horas
                 </p>
 
                 <div className="bg-zinc-800 px-4 py-2 rounded-full text-sm">
@@ -315,12 +335,83 @@ export default function DashboardPage() {
               </div>
 
               <h4 className="text-2xl font-bold mb-4">
-                Como saber se estou pronta para liderança?
+                Entrego resultado há meses, mas nunca sou considerada nas movimentações internas.
               </h4>
 
               <p className="text-zinc-400 leading-relaxed">
-                Liderança não começa no cargo. Existem sinais claros de prontidão
-                ligados à influência, visão estratégica e tomada de decisão.
+                Sinto que pessoas com mais relacionamento político acabam tendo mais visibilidade do que quem performa operacionalmente.
+              </p>
+
+            </div>
+
+            <div className="bg-zinc-900 border border-white/10 rounded-[28px] p-8">
+
+              <div className="flex items-center justify-between mb-6">
+
+                <p className="text-zinc-500 text-sm">
+                  Analista Sênior • Curitiba • há 5 horas
+                </p>
+
+                <div className="bg-zinc-800 px-4 py-2 rounded-full text-sm">
+                  Liderança
+                </div>
+
+              </div>
+
+              <h4 className="text-2xl font-bold mb-4">
+                Como saber se estou pronta para gestão ou apenas absorvendo mais responsabilidade?
+              </h4>
+
+              <p className="text-zinc-400 leading-relaxed">
+                Tenho liderado projetos, treinado pessoas e resolvido crises, mas nunca recebo movimentação formal.
+              </p>
+
+            </div>
+
+            <div className="bg-zinc-900 border border-white/10 rounded-[28px] p-8">
+
+              <div className="flex items-center justify-between mb-6">
+
+                <p className="text-zinc-500 text-sm">
+                  Coordenadora • Recife • há 8 horas
+                </p>
+
+                <div className="bg-zinc-800 px-4 py-2 rounded-full text-sm">
+                  Política Corporativa
+                </div>
+
+              </div>
+
+              <h4 className="text-2xl font-bold mb-4">
+                Como desenvolver influência sem parecer interesseira ou artificial?
+              </h4>
+
+              <p className="text-zinc-400 leading-relaxed">
+                Percebo que networking interno pesa muito, mas ainda tenho dificuldade em me posicionar estrategicamente.
+              </p>
+
+            </div>
+
+            <div className="bg-zinc-900 border border-white/10 rounded-[28px] p-8">
+
+              <div className="flex items-center justify-between mb-6">
+
+                <p className="text-zinc-500 text-sm">
+                  Gerente Operacional • Belo Horizonte • há 1 dia
+                </p>
+
+                <div className="bg-zinc-800 px-4 py-2 rounded-full text-sm">
+                  Gestão de Crise
+                </div>
+
+              </div>
+
+              <h4 className="text-2xl font-bold mb-4">
+                Como manter autoridade em operações sob pressão sem desgastar completamente a equipe?
+              </h4>
+
+              <p className="text-zinc-400 leading-relaxed">
+                KPI agressivo, absenteísmo alto e turnover constante estão afetando diretamente o clima operacional.
               </p>
 
             </div>
