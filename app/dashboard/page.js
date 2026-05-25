@@ -55,6 +55,20 @@ const communityQuestions = [
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
+  useEffect(() => {
+
+  const interval = setInterval(() => {
+
+    setCurrentQuestion((prev) =>
+      (prev + 1) % communityQuestions.length
+    );
+
+  }, 5000);
+
+  return () => clearInterval(interval);
+
+}, []);
+  
   return (
     <main className="min-h-screen bg-black text-white flex">
 
