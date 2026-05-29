@@ -1,4 +1,53 @@
+"use client";
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { supabase } from "../../lib/supabase";
+
 export default function RegisterPage() {
+  const router = useRouter();
+
+const [nome, setNome] = useState("");
+const [email, setEmail] = useState("");
+const [senha, setSenha] = useState("");
+const [confirmarSenha, setConfirmarSenha] = useState("");
+const [loading, setLoading] = useState(false);
+const [erro, setErro] = useState("");
+
+const handleRegister = async () => {
+  setErro("");
+
+  if (!nome || !email || !senha) {
+    setErro("Preencha todos os campos obrigatórios.");
+    return;
+  }
+
+  if (senha !== confirmarSenha) {
+    setErro("As senhas não coincidem.");
+    return;
+  }
+
+  setLoading(true);
+
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password: senha,
+    options: {
+      data: {
+        nome,
+      },
+    },
+  });
+
+  setLoading(false);
+
+  if (error) {
+    setErro(error.message);
+    return;
+  }
+
+  router.push("/checkout");
+};
   return (
     <main className="min-h-screen bg-black text-white px-6 py-16">
       <div className="max-w-3xl mx-auto">
@@ -45,11 +94,13 @@ export default function RegisterPage() {
                   Nome completo
                 </label>
 
-                <input
-                  type="text"
-                  placeholder="Seu nome"
-                  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
-                />
+<input
+  type="text"
+  value={nome}
+  onChange={(e) => setNome(e.target.value)}
+  placeholder="Seu nome"
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+/>
               </div>
 
               <div>
@@ -57,11 +108,13 @@ export default function RegisterPage() {
                   Email
                 </label>
 
-                <input
-                  type="email"
-                  placeholder="seuemail@email.com"
-                  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
-                />
+<input
+  type="email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  placeholder="seuemail@email.com"
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+/>
               </div>
 
               <div>
@@ -262,11 +315,13 @@ export default function RegisterPage() {
                   Senha
                 </label>
 
-                <input
-                  type="password"
-                  placeholder="********"
-                  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
-                />
+<input
+  type="password"
+  value={senha}
+  onChange={(e) => setSenha(e.target.value)}
+  placeholder="********"
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+/>
               </div>
 
               <div>
@@ -274,23 +329,31 @@ export default function RegisterPage() {
                   Confirmar senha
                 </label>
 
-                <input
-                  type="password"
-                  placeholder="********"
-                  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
-                />
+<input
+  type="password"
+  value={confirmarSenha}
+  onChange={(e) => setConfirmarSenha(e.target.value)}
+  placeholder="********"
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+/>
               </div>
 
             </div>
           </div>
 
           {/* BOTÃO */}
-<a
-  href="/checkout"
-  className="block w-full bg-white text-black rounded-2xl py-5 font-semibold text-lg hover:bg-zinc-200 transition text-center"
+  {erro && (
+  <div className="mb-6 bg-red-500/10 border border-red-500/20 rounded-2xl p-4 text-red-400">
+    {erro}
+  </div>
+)}
+<button
+  onClick={handleRegister}
+  disabled={loading}
+  className="w-full bg-white text-black rounded-2xl py-5 font-semibold text-lg hover:bg-zinc-200 transition text-center disabled:opacity-50"
 >
-  Criar conta e continuar
-</a>
+  {loading ? "Criando conta..." : "Criar conta e continuar"}
+</button>
 
           {/* LOGIN */}
           <div className="border-t border-white/10 mt-10 pt-8 text-center">
