@@ -11,6 +11,18 @@ const [nome, setNome] = useState("");
 const [email, setEmail] = useState("");
 const [senha, setSenha] = useState("");
 const [confirmarSenha, setConfirmarSenha] = useState("");
+const [whatsapp, setWhatsapp] = useState("");
+const [cidade, setCidade] = useState("");
+const [estado, setEstado] = useState("");
+
+const [cargo, setCargo] = useState("");
+const [empresa, setEmpresa] = useState("");
+const [area, setArea] = useState("");
+const [nivel, setNivel] = useState("");
+const [experiencia, setExperiencia] = useState("");
+
+const [objetivo, setObjetivo] = useState("");
+const [desafio, setDesafio] = useState("");
 const [loading, setLoading] = useState(false);
 const [erro, setErro] = useState("");
 
