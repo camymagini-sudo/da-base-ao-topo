@@ -134,11 +134,13 @@ const handleRegister = async () => {
                   WhatsApp
                 </label>
 
-                <input
-                  type="text"
-                  placeholder="(11) 99999-9999"
-                  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
-                />
+<input
+  type="text"
+  value={whatsapp}
+  onChange={(e) => setWhatsapp(e.target.value)}
+  placeholder="(11) 99999-9999"
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+/>
               </div>
 
               <div>
@@ -146,11 +148,13 @@ const handleRegister = async () => {
                   Cidade
                 </label>
 
-                <input
-                  type="text"
-                  placeholder="São Paulo"
-                  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
-                />
+<input
+  type="text"
+  value={cidade}
+  onChange={(e) => setCidade(e.target.value)}
+  placeholder="São Paulo"
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+/>
               </div>
 
               <div>
@@ -158,11 +162,13 @@ const handleRegister = async () => {
                   Estado
                 </label>
 
-                <input
-                  type="text"
-                  placeholder="SP"
-                  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
-                />
+<input
+  type="text"
+  value={estado}
+  onChange={(e) => setEstado(e.target.value)}
+  placeholder="SP"
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+/>
               </div>
 
             </div>
@@ -194,11 +200,13 @@ const handleRegister = async () => {
                   Cargo atual
                 </label>
 
-                <input
-                  type="text"
-                  placeholder="Ex: Coordenador de Operações"
-                  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
-                />
+<input
+  type="text"
+  value={cargo}
+  onChange={(e) => setCargo(e.target.value)}
+  placeholder="Ex: Coordenador de Operações"
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+/>
               </div>
 
               <div>
@@ -206,11 +214,13 @@ const handleRegister = async () => {
                   Empresa atual
                 </label>
 
-                <input
-                  type="text"
-                  placeholder="Nome da empresa"
-                  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
-                />
+<input
+  type="text"
+  value={empresa}
+  onChange={(e) => setEmpresa(e.target.value)}
+  placeholder="Nome da empresa"
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+/>
               </div>
 
               <div>
@@ -218,18 +228,22 @@ const handleRegister = async () => {
                   Área de atuação
                 </label>
 
-                <select className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none">
-                  <option>Selecione</option>
-                  <option>Operações</option>
-                  <option>Qualidade</option>
-                  <option>Treinamento</option>
-                  <option>Projetos</option>
-                  <option>Processos</option>
-                  <option>Customer Experience</option>
-                  <option>RH</option>
-                  <option>Tecnologia</option>
-                  <option>Financeiro</option>
-                </select>
+<select
+  value={area}
+  onChange={(e) => setArea(e.target.value)}
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+>
+  <option value="">Selecione</option>
+  <option value="Operações">Operações</option>
+  <option value="Qualidade">Qualidade</option>
+  <option value="Treinamento">Treinamento</option>
+  <option value="Projetos">Projetos</option>
+  <option value="Processos">Processos</option>
+  <option value="Customer Experience">Customer Experience</option>
+  <option value="RH">RH</option>
+  <option value="Tecnologia">Tecnologia</option>
+  <option value="Financeiro">Financeiro</option>
+</select>
               </div>
 
               <div>
@@ -237,15 +251,19 @@ const handleRegister = async () => {
                   Nível profissional
                 </label>
 
-                <select className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none">
-                  <option>Selecione</option>
-                  <option>Analista</option>
-                  <option>Especialista</option>
-                  <option>Supervisor</option>
-                  <option>Coordenador</option>
-                  <option>Gerente</option>
-                  <option>Diretor</option>
-                </select>
+<select
+  value={nivel}
+  onChange={(e) => setNivel(e.target.value)}
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+>
+  <option value="">Selecione</option>
+  <option value="Analista">Analista</option>
+  <option value="Especialista">Especialista</option>
+  <option value="Supervisor">Supervisor</option>
+  <option value="Coordenador">Coordenador</option>
+  <option value="Gerente">Gerente</option>
+  <option value="Diretor">Diretor</option>
+</select>
               </div>
 
               <div className="md:col-span-2">
@@ -253,13 +271,17 @@ const handleRegister = async () => {
                   Tempo de experiência
                 </label>
 
-                <select className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none">
-                  <option>Selecione</option>
-                  <option>0-2 anos</option>
-                  <option>3-5 anos</option>
-                  <option>6-10 anos</option>
-                  <option>10+ anos</option>
-                </select>
+<select
+  value={experiencia}
+  onChange={(e) => setExperiencia(e.target.value)}
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+>
+  <option value="">Selecione</option>
+  <option value="0-2 anos">0-2 anos</option>
+  <option value="3-5 anos">3-5 anos</option>
+  <option value="6-10 anos">6-10 anos</option>
+  <option value="10+ anos">10+ anos</option>
+</select>
               </div>
 
             </div>
@@ -291,15 +313,19 @@ const handleRegister = async () => {
                   Principal objetivo na plataforma
                 </label>
 
-                <select className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none">
-                  <option>Selecione</option>
-                  <option>Crescimento para liderança</option>
-                  <option>Melhorar performance</option>
-                  <option>Buscar promoção</option>
-                  <option>Migrar de área</option>
-                  <option>Desenvolver gestão</option>
-                  <option>Mentoria individual</option>
-                </select>
+<select
+  value={objetivo}
+  onChange={(e) => setObjetivo(e.target.value)}
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none"
+>
+  <option value="">Selecione</option>
+  <option value="Crescimento para liderança">Crescimento para liderança</option>
+  <option value="Melhorar performance">Melhorar performance</option>
+  <option value="Buscar promoção">Buscar promoção</option>
+  <option value="Migrar de área">Migrar de área</option>
+  <option value="Desenvolver gestão">Desenvolver gestão</option>
+  <option value="Mentoria individual">Mentoria individual</option>
+</select>
               </div>
 
               <div>
@@ -307,11 +333,13 @@ const handleRegister = async () => {
                   Qual seu maior desafio profissional hoje?
                 </label>
 
-                <textarea
-                  rows="5"
-                  placeholder="Descreva seus desafios atuais..."
-                  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none resize-none"
-                />
+<textarea
+  rows="5"
+  value={desafio}
+  onChange={(e) => setDesafio(e.target.value)}
+  placeholder="Descreva seus desafios atuais..."
+  className="w-full bg-black border border-white/10 rounded-2xl px-5 py-4 outline-none resize-none"
+/>
               </div>
 
             </div>
