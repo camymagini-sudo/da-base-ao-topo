@@ -9,6 +9,7 @@ export default function DashboardPage() {
   const router = useRouter();
 
 const [userName, setUserName] = useState("Profissional");
+const [checkingAccess, setCheckingAccess] = useState(true);
 const [loadingUser, setLoadingUser] = useState(true);
 
 const communityQuestions = [
@@ -82,6 +83,17 @@ useEffect(() => {
       data: { user },
     } = await supabase.auth.getUser();
 
+    const { data: profile } = await supabase
+  .from("profiles")
+  .select("acesso_liberado")
+  .eq("user_id", user.id)
+  .single();
+
+if (!profile?.acesso_liberado) {
+  router.push("/payment-pending");
+  return;
+}
+
     if (!user) {
       router.push("/login");
       return;
@@ -93,6 +105,7 @@ useEffect(() => {
       "Profissional";
 
     setUserName(nome);
+    setCheckingAccess(false);
     setLoadingUser(false);
   };
 
@@ -108,6 +121,13 @@ if (loadingUser) {
   return (
     <main className="min-h-screen bg-black flex items-center justify-center text-white">
       Carregando...
+    </main>
+  );
+}
+  if (checkingAccess) {
+  return (
+    <main className="min-h-screen bg-black flex items-center justify-center text-white">
+      Verificando acesso...
     </main>
   );
 }
