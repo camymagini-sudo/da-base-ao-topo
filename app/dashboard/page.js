@@ -183,9 +183,12 @@ return (
             Comunidade • Q&A
           </a>
 
-          <a className="block hover:bg-zinc-900 rounded-2xl px-5 py-4 transition">
-            Meu Perfil
-          </a>
+<a
+  href="/dashboard/profile"
+  className="block hover:bg-zinc-900 rounded-2xl px-5 py-4 transition"
+>
+  Meu Perfil
+</a>
 
 <button
   onClick={handleLogout}
