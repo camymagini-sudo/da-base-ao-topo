@@ -136,9 +136,12 @@ return (
             Início
           </a>
 
-          <a className="block hover:bg-zinc-900 rounded-2xl px-5 py-4 transition">
-            Semana 1
-          </a>
+<a
+  href="/dashboard/week1"
+  className="block hover:bg-zinc-900 rounded-2xl px-5 py-4 transition"
+>
+  Semana 1
+</a>
 
           <a className="block text-zinc-500 hover:bg-zinc-900 rounded-2xl px-5 py-4 transition">
             {!contentUnlocked ? "Semana 2 🔒" : "Semana 2"}
