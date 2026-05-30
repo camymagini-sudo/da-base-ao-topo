@@ -9,7 +9,8 @@ export default function DashboardPage() {
   const router = useRouter();
 
 const [userName, setUserName] = useState("Profissional");
-  
+const [loadingUser, setLoadingUser] = useState(true);
+
 const communityQuestions = [
   {
     role: "Supervisora • São Paulo",
@@ -92,6 +93,7 @@ useEffect(() => {
       "Profissional";
 
     setUserName(nome);
+    setLoadingUser(false);
   };
 
   getUser();
@@ -101,6 +103,14 @@ const handleLogout = async () => {
   await supabase.auth.signOut();
   router.push("/login");
 };
+
+if (loadingUser) {
+  return (
+    <main className="min-h-screen bg-black flex items-center justify-center text-white">
+      Carregando...
+    </main>
+  );
+}
   
 return (
     <main className="min-h-screen bg-black text-white flex">
