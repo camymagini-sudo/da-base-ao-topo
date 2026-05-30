@@ -1,9 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { supabase } from "../../lib/supabase";
 
 export default function DashboardPage() {
 
+  const router = useRouter();
+
+const [userName, setUserName] = useState("Profissional");
+  
 const communityQuestions = [
   {
     role: "Supervisora • São Paulo",
@@ -68,8 +74,35 @@ const communityQuestions = [
   return () => clearInterval(interval);
 
 }, []);
+
+useEffect(() => {
+  const getUser = async () => {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+      router.push("/login");
+      return;
+    }
+
+    const nome =
+      user.user_metadata?.nome ||
+      user.email?.split("@")[0] ||
+      "Profissional";
+
+    setUserName(nome);
+  };
+
+  getUser();
+}, [router]);
+
+const handleLogout = async () => {
+  await supabase.auth.signOut();
+  router.push("/login");
+};
   
-  return (
+return (
     <main className="min-h-screen bg-black text-white flex">
 
       {/* SIDEBAR */}
@@ -135,6 +168,13 @@ const communityQuestions = [
             Meu Perfil
           </a>
 
+<button
+  onClick={handleLogout}
+  className="w-full text-left hover:bg-zinc-900 rounded-2xl px-5 py-4 transition text-red-400"
+>
+  Sair
+</button>
+  
         </nav>
 
         <div className="border-t border-white/10 pt-6">
@@ -162,7 +202,7 @@ const communityQuestions = [
           </p>
 
           <h2 className="text-5xl font-bold mb-6">
-            Bem-vinda de volta, Camila.
+           Bem-vindo(a) de volta, {userName}.
           </h2>
 
           <p className="text-zinc-400 text-xl leading-relaxed max-w-3xl">
