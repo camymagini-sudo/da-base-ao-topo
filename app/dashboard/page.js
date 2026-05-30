@@ -168,9 +168,12 @@ return (
   Biblioteca Estratégica
 </a>
 
-          <a className="block hover:bg-zinc-900 rounded-2xl px-5 py-4 transition">
-            Templates Executivos
-          </a>
+<a
+  href="/dashboard/templates"
+  className="block hover:bg-zinc-900 rounded-2xl px-5 py-4 transition"
+>
+  Templates Executivos
+</a>
 
           <a className="block hover:bg-zinc-900 rounded-2xl px-5 py-4 transition">
             Mentoria
