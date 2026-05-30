@@ -161,9 +161,12 @@ return (
 
           <div className="border-t border-white/10 my-6" />
 
-          <a className="block hover:bg-zinc-900 rounded-2xl px-5 py-4 transition">
-            Biblioteca Estratégica
-          </a>
+<a
+  href="/dashboard/library"
+  className="block hover:bg-zinc-900 rounded-2xl px-5 py-4 transition"
+>
+  Biblioteca Estratégica
+</a>
 
           <a className="block hover:bg-zinc-900 rounded-2xl px-5 py-4 transition">
             Templates Executivos
