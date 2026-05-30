@@ -179,9 +179,12 @@ return (
             Mentoria
           </a>
 
-          <a className="block hover:bg-zinc-900 rounded-2xl px-5 py-4 transition">
-            Comunidade • Q&A
-          </a>
+<a
+  href="/dashboard/community"
+  className="block hover:bg-zinc-900 rounded-2xl px-5 py-4 transition"
+>
+  Comunidade • Q&A
+</a>
 
 <a
   href="/dashboard/profile"
