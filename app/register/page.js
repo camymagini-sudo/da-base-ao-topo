@@ -77,12 +77,16 @@ if (!error && data?.user) {
       acesso_liberado: false,
     });
 
-  if (profileError) {
-    console.error(profileError);
-    setErro("Erro ao salvar perfil.");
-    setLoading(false);
-    return;
-  }
+if (profileError) {
+  console.error(profileError);
+
+  setErro(
+    profileError.message || JSON.stringify(profileError)
+  );
+
+  setLoading(false);
+  return;
+}
 }
 
 setLoading(false);
