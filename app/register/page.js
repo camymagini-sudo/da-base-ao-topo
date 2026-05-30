@@ -41,17 +41,51 @@ const handleRegister = async () => {
 
   setLoading(true);
 
-  const { data, error } = await supabase.auth.signUp({
-    email,
-    password: senha,
-    options: {
-      data: {
-        nome,
-      },
+const { data, error } = await supabase.auth.signUp({
+  email,
+  password: senha,
+  options: {
+    data: {
+      nome,
     },
-  });
+  },
+});
 
-  setLoading(false);
+if (!error && data?.user) {
+  const { error: profileError } = await supabase
+    .from("profiles")
+    .insert({
+      id: data.user.id,
+      user_id: data.user.id,
+
+      nome,
+      email,
+
+      whatsapp,
+      cidade,
+      estado,
+
+      cargo,
+      empresa,
+      area,
+      nivel,
+      experiencia,
+
+      objetivo,
+      desafio,
+
+      acesso_liberado: false,
+    });
+
+  if (profileError) {
+    console.error(profileError);
+    setErro("Erro ao salvar perfil.");
+    setLoading(false);
+    return;
+  }
+}
+
+setLoading(false);
 
   if (error) {
     setErro(error.message);
